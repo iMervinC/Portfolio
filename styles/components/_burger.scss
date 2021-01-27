@@ -7,6 +7,14 @@
   cursor: pointer;
   z-index: 1;
   display: block;
+
+  &:hover > span {
+    background-color: #00e0ee;
+    transform: scale(1.2);
+  }
+  &:hover.open-n {
+    transform: scale(1.1);
+  }
 }
 
 #nav-icon4 span {
@@ -14,7 +22,6 @@
   position: absolute;
   height: 4px;
   width: 100%;
-
   opacity: 1;
   left: 0;
   transform: rotate(0deg);

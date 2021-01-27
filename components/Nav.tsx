@@ -1,9 +1,12 @@
 import { FC, useState } from 'react'
 import Link from 'next/link'
+import Logo from './Logo'
+import useWindowSize from '../hooks/useWindowSize'
 
 const Nav: FC = () => {
   const [where, setWhere] = useState<string>('home')
   const [nav, setNav] = useState<boolean>(true)
+  const size = useWindowSize()
 
   const navigation: string[] = [
     'home',
@@ -18,8 +21,15 @@ const Nav: FC = () => {
   }
 
   return (
-    <nav className="flex fixed justify-center text-custom-offwhite items-center contain mt-20 left-1/2 transform -translate-x-1/2">
-      <img className="h-10" src="/logo.svg" alt="logo" />
+    <nav className="flex fixed justify-center text-custom-offwhite items-center contain mt-28 left-1/2 transform -translate-x-1/2">
+      <Link href="/">
+        <a onClick={() => whereHandler('home')}>
+          <Logo />
+        </a>
+      </Link>
+      {/* <p>
+        {size.height} {size.width >= 1023 ? 'desk' : 'mobile'}
+      </p> */}
       <ul className="font-bold flex gap-10 text-xl ml-auto mr-2">
         {nav &&
           navigation.map((nav, index) => (
@@ -36,30 +46,31 @@ const Nav: FC = () => {
             </Link>
           ))}
       </ul>
+
       <div
         id="nav-icon4"
-        className={nav && `open-n`}
+        className={nav ? `open-n` : ''}
         onClick={() => setNav(!nav)}
       >
         <span
           className={
             !nav
-              ? `bg-custom`
-              : `bg-custom-offwhite` + ' transition-colors duration-500'
+              ? `bg-custom-offwhite`
+              : `bg-custom` + ' transition-colors duration-500'
           }
         ></span>
         <span
           className={
             !nav
-              ? `bg-custom`
-              : `bg-custom-offwhite` + ' transition-colors duration-500'
+              ? `bg-custom-offwhite`
+              : `bg-custom` + ' transition-colors duration-500'
           }
         ></span>
         <span
           className={
             !nav
-              ? `bg-custom`
-              : `bg-custom-offwhite` + ' transition-colors duration-500'
+              ? `bg-custom-offwhite`
+              : `bg-custom` + ' transition-colors duration-500'
           }
         ></span>
       </div>
