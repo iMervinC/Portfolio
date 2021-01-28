@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { wave, wave2 } from '../animations/wave'
 
 interface GlobeType {
-  zIndex?: number
+  zIndex?: string
   fill1?: string
   fill2?: string
 }
