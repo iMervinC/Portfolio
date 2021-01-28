@@ -2,17 +2,27 @@ import { AppProps } from 'next/app'
 import '../styles/tailwind.css'
 import '../styles/directives.css'
 import '../styles/main.scss'
-import Nav from '../components/Nav'
+import Nav from '../components/Nav/Nav'
+import Frame from '../components/Frame'
+import { motion, AnimatePresence } from 'framer-motion'
+import { pageAnim } from '../animations/frame'
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps, router }: AppProps) {
   return (
-    <div>
-      <div className="frame-v left-0 bg-custom-offwhite"></div>
-      <div className="frame-v right-0 bg-custom-offwhite"></div>
-      <div className="frame-h top-0 bg-custom-offwhite"></div>
-      <div className="frame-h bottom-0 bg-custom-offwhite"></div>
+    <>
+      <Frame />
       <Nav />
-      <Component {...pageProps} />
-    </div>
+      <AnimatePresence>
+        <motion.div
+          key={router.route}
+          initial="pageIn"
+          animate="animatePage"
+          exit="pageExit"
+          variants={pageAnim}
+        >
+          <Component {...pageProps} />
+        </motion.div>
+      </AnimatePresence>
+    </>
   )
 }

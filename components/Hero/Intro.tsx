@@ -1,9 +1,16 @@
 import React, { FC } from 'react'
+import { motion } from 'framer-motion'
+import { IntroAnim } from '../../animations/hero'
 
 const Intro: FC = () => {
   return (
     <div className="text-7xl sm:text-8xl">
-      <div className="flex items-center transform sm:-translate-x-8 ">
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={IntroAnim}
+        className="flex items-center transform sm:-translate-x-8"
+      >
         <p>H</p>
         <svg
           className="h-14 sm:h-20"
@@ -21,8 +28,13 @@ const Intro: FC = () => {
           />
         </svg>
         <p className="ml-7">I'm</p>
-      </div>
-      <div className="flex items-center">
+      </motion.div>
+      <motion.div
+        initial="hidden"
+        animate="visible2"
+        variants={IntroAnim}
+        className="flex items-center"
+      >
         <svg
           className="h-14 sm:h-20"
           viewBox="0 0 64 63"
@@ -71,8 +83,13 @@ const Intro: FC = () => {
           />
         </svg>
         <p>ervin</p>
-      </div>
-      <div className="flex items-center transform sm:translate-x-8">
+      </motion.div>
+      <motion.div
+        initial="hidden"
+        animate="visible3"
+        variants={IntroAnim}
+        className="flex items-center transform sm:translate-x-8"
+      >
         <svg
           className="h-14 sm:h-20"
           viewBox="0 0 42 63"
@@ -97,7 +114,7 @@ const Intro: FC = () => {
           />
         </svg>
         <p>hristian</p>
-      </div>
+      </motion.div>
     </div>
   )
 }

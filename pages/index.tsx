@@ -1,26 +1,14 @@
-import { FC, useState } from 'react'
+import { FC } from 'react'
 import Hero from '../components/Hero/Hero'
 import PageWarp from '../components/PageWarp'
 import TextLoop from 'react-text-loop'
+import { motion } from 'framer-motion'
 
 const Home: FC = () => {
-  const [word, setWord] = useState('')
-
-  const loopText = (str) => {
-    let array = []
-    const interval = 50
-    str.split('').forEach((x, index) => {
-      setTimeout(function () {
-        array.push(x)
-        setWord(array.join(''))
-      }, index * interval)
-    }, 5000)
-  }
-
   return (
     <PageWarp title={'iMervinC | Home'}>
       <Hero />
-      <div className="flex flex-col gap-10 text-5xl sm:text-6xl">
+      <div className="flex flex-col gap-10 text-4xl sm:text-5xl md:text-6xl">
         <p>
           I've been learning{' '}
           <span className="text-custom">Web Development</span> since I got out
@@ -40,7 +28,7 @@ const Home: FC = () => {
           it’s my main jam at the moment! Right now I’m getting my hands dirty
           with <span className="text-custom">Next.js</span> and{' '}
           <span className="text-custom">MongoDB</span> to build{' '}
-          <span className="text-custom">fullstack</span> apps and to host it to
+          <span className="text-custom">fullstack</span> apps and host it to
           Vercel
         </p>
         <p className="text-custom">
