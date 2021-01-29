@@ -34,13 +34,13 @@ const Home: FC = () => {
         <p className="text-custom">
           Stay Bold &
           <br />
-          Have a{' '}
-          <TextLoop>
-            <span>Be Beautiful</span>
-            <span>Stay Calm</span>
-            <span>Stay Thicc</span>
-          </TextLoop>
+          Have a
         </p>
+        <TextLoop>
+          <span>Beautiful</span>
+          <span>Amazing</span>
+          <span>Wonderful</span>
+        </TextLoop>
       </div>
     </PageWarp>
   )
