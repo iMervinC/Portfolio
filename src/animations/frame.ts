@@ -11,6 +11,9 @@ export const pageAnim = {
   pageExit: {
     x: '-10vw',
     opacity: 0,
+    transition: {
+      duration: 0.3,
+    },
   },
 }
 

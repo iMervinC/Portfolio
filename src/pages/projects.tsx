@@ -1,16 +1,15 @@
 import React, { FC } from 'react'
-import Globe from '../components/Globe'
+import Globe from '@/components/Globe'
+import PageWarp from '@/components/PageWarp'
 
-import PageWarp from '../components/PageWarp'
-
-const contacts: FC = () => {
+const projects: FC = () => {
   return (
-    <PageWarp title={'contacts'}>
+    <PageWarp title={'Projects'}>
       <div className="h-screen w-full flex items-center justify-center flex-col">
-        <Globe fill1="#745C97" fill2="#39375B">
+        <Globe fill1="#2F2504" fill2="#594E36">
           <h2
             className="text-6xl self-center text-center z-30"
-            style={{ color: '#39375B', WebkitTextStroke: '1px white' }}
+            style={{ color: '#2F2504', WebkitTextStroke: '1px white' }}
           >
             Men At Work!
           </h2>
@@ -20,4 +19,4 @@ const contacts: FC = () => {
   )
 }
 
-export default contacts
+export default projects

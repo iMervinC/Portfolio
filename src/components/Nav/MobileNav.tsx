@@ -12,7 +12,11 @@ const MobileNav = ({ navigation, where, whereHandler }) => {
       transition={{ type: 'tween' }}
     >
       {navigation.map((nav, index) => (
-        <Link key={index} href={nav === 'home' ? '/' : `/${nav}`}>
+        <Link
+          scroll={false}
+          key={index}
+          href={nav === 'home' ? '/' : `/${nav}`}
+        >
           <a onClick={() => whereHandler(nav)}>
             <li
               style={{ WebkitTextStroke: '1px black' }}

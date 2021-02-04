@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { frameX, frameY } from '../animations/frame'
-import useWindowSize from '../hooks/useWindowSize'
+import { frameX, frameY } from '@/animations/frame'
+import useWindowSize from '@/hooks/useWindowSize'
 
 const Frame = () => {
   const size = useWindowSize()

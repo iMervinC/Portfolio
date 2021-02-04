@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { motion } from 'framer-motion'
-import { wave, wave2 } from '../animations/wave'
+import { wave, wave2 } from '@/animations/wave'
 
 interface GlobeType {
   zIndex?: string

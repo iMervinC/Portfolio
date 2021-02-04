@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
-import Globe from '../components/Globe'
-import PageWarp from '../components/PageWarp'
+import Globe from '@/components/Globe'
+import PageWarp from '@/components/PageWarp'
 
 const blogs: FC = () => {
   return (

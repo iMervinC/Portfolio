@@ -1,8 +1,7 @@
 import { FC } from 'react'
-import Hero from '../components/Hero/Hero'
-import PageWarp from '../components/PageWarp'
+import Hero from '@/components/Hero/Hero'
+import PageWarp from '@/components/PageWarp'
 import TextLoop from 'react-text-loop'
-import { motion } from 'framer-motion'
 
 const Home: FC = () => {
   return (

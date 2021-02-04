@@ -32,7 +32,7 @@ const Nav: FC = () => {
 
   return (
     <nav className="nav">
-      <Link href="/">
+      <Link scroll={false} href="/">
         <a onClick={() => whereHandler('home')}>
           <Logo />
         </a>
@@ -58,7 +58,11 @@ const Nav: FC = () => {
                 className="font-bold flex gap-10 text-xl mr-2"
               >
                 {navigation.map((nav, index) => (
-                  <Link key={index} href={nav === 'home' ? '/' : `/${nav}`}>
+                  <Link
+                    scroll={false}
+                    key={index}
+                    href={nav === 'home' ? '/' : `/${nav}`}
+                  >
                     <a onClick={() => whereHandler(nav)}>
                       <li
                         className={`uppercase hover:text-custom transition duration-500 ${

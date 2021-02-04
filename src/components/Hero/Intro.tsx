@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { motion } from 'framer-motion'
-import { IntroAnim } from '../../animations/hero'
+import { IntroAnim } from '@/animations/hero'
 
 const Intro: FC = () => {
   return (

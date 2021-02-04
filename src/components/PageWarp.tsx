@@ -1,6 +1,5 @@
 import React, { FC } from 'react'
 import Head from 'next/head'
-import Nav from './Nav/Nav'
 
 interface Layout {
   title: string
