@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import Hero from '@/components/Hero/Hero'
-import PageWarp from '@/components/PageWarp'
+import PageWarp from '@/components/PageWrap'
 import TextLoop from 'react-text-loop'
 
 const Home: FC = () => {

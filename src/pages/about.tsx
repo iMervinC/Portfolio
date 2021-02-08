@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import Globe from '@/components/Globe'
-import PageWarp from '@/components/PageWarp'
+import PageWarp from '@/components/PageWrap'
 
 const about: FC = () => {
   return (

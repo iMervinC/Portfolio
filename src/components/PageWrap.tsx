@@ -5,7 +5,7 @@ interface Layout {
   title: string
 }
 
-const PageWarp: FC<Layout> = ({ title, children }) => {
+const PageWrap: FC<Layout> = ({ title, children }) => {
   return (
     <div className="bg-black text-custom-offwhite font-bold contain">
       <Head>
@@ -17,4 +17,4 @@ const PageWarp: FC<Layout> = ({ title, children }) => {
   )
 }
 
-export default PageWarp
+export default PageWrap
