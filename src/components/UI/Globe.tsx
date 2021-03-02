@@ -8,7 +8,7 @@ interface GlobeType {
   fill2?: string
 }
 
-const Globe: FC<GlobeType> = ({ zIndex, fill1, fill2, children }) => {
+export const Globe: FC<GlobeType> = ({ zIndex, fill1, fill2, children }) => {
   return (
     <div
       className={`${zIndex} relative bg-custom-offwhite rounded-full overflow-hidden border-solid border-8 border-custom w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 flex`}
@@ -40,5 +40,3 @@ const Globe: FC<GlobeType> = ({ zIndex, fill1, fill2, children }) => {
     </div>
   )
 }
-
-export default Globe

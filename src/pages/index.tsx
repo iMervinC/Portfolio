@@ -1,18 +1,13 @@
 import { FC } from 'react'
-import Hero from '@/components/Hero/Hero'
-import PageWarp from '@/components/PageWrap'
-import TextLoop from 'react-text-loop'
+import { Hero } from '@/components/Hero'
+import { PageWrap } from '@/components/UI'
 
 const Home: FC = () => {
   return (
-    <PageWarp title={'iMervinC | Home'}>
+    <PageWrap title={'iMervinC | Home'}>
       <Hero />
-      <div className="flex flex-col gap-10 text-4xl sm:text-5xl md:text-6xl">
-        <p>
-          I've been learning{' '}
-          <span className="text-custom">Web Development</span> since I got out
-          of college just for fun and I'm still doing it today!
-        </p>
+      <div className="flex flex-col gap-10 text-4xl sm:text-5xl ">
+        <p>Welcome to my slice🍕 of the internet</p>
         <p>
           I'm mainly interested in{' '}
           <span className="text-custom">frontend </span>
@@ -30,18 +25,8 @@ const Home: FC = () => {
           <span className="text-custom">fullstack</span> apps and host it to
           Vercel
         </p>
-        <p className="text-custom">
-          Stay Bold &
-          <br />
-          Have a
-        </p>
-        <TextLoop>
-          <span>Beautiful</span>
-          <span>Amazing</span>
-          <span>Wonderful</span>
-        </TextLoop>
       </div>
-    </PageWarp>
+    </PageWrap>
   )
 }
 

@@ -1,12 +1,12 @@
 import { FC, useState, useEffect } from 'react'
 import Link from 'next/link'
-import Logo from '../Logo'
+import { Logo } from '../UI'
 import useWindowSize from '../../hooks/useWindowSize'
 import useLocalStorage from '../../hooks/useLocalStorage'
-import MobileNav from './MobileNav'
+import { MobileNav } from './MobileNav'
 import { motion, AnimatePresence } from 'framer-motion'
 
-const Nav: FC = () => {
+export const Nav: FC = () => {
   const [where, setWhere] = useState<string>('home')
   const [nav, setNav] = useState<boolean>(false)
   const size = useWindowSize()
@@ -110,5 +110,3 @@ const Nav: FC = () => {
     </nav>
   )
 }
-
-export default Nav

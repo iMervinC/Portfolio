@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 
-const MobileNav = ({ navigation, where, whereHandler }) => {
+export const MobileNav = ({ navigation, where, whereHandler }) => {
   return (
     <motion.ul
       className="nav-mobile right-0"
@@ -32,5 +32,3 @@ const MobileNav = ({ navigation, where, whereHandler }) => {
     </motion.ul>
   )
 }
-
-export default MobileNav

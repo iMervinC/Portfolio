@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { frameX, frameY } from '@/animations/frame'
 import useWindowSize from '@/hooks/useWindowSize'
 
-const Frame = () => {
+export const Frame = () => {
   const size = useWindowSize()
 
   return (
@@ -39,5 +39,3 @@ const Frame = () => {
     </>
   )
 }
-
-export default Frame

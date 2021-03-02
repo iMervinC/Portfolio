@@ -1,10 +1,9 @@
 import React, { FC } from 'react'
-import Globe from '@/components/Globe'
-import PageWarp from '@/components/PageWrap'
+import { Globe, PageWrap } from '@/components/UI'
 
 const contacts: FC = () => {
   return (
-    <PageWarp title={'contacts'}>
+    <PageWrap title={'contacts'}>
       <div className="h-screen w-full flex items-center justify-center flex-col">
         <Globe fill1="#745C97" fill2="#39375B">
           <h2
@@ -15,7 +14,7 @@ const contacts: FC = () => {
           </h2>
         </Globe>
       </div>
-    </PageWarp>
+    </PageWrap>
   )
 }
 

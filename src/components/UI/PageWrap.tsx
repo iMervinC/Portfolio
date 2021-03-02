@@ -5,7 +5,7 @@ interface Layout {
   title: string
 }
 
-const PageWrap: FC<Layout> = ({ title, children }) => {
+export const PageWrap: FC<Layout> = ({ title, children }) => {
   return (
     <div className="bg-black text-custom-offwhite font-bold contain">
       <Head>
@@ -16,5 +16,3 @@ const PageWrap: FC<Layout> = ({ title, children }) => {
     </div>
   )
 }
-
-export default PageWrap

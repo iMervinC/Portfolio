@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 
-const Logo: FC = () => {
+export const Logo: FC = () => {
   return (
     <svg
       className="h-8 fill-current text-custom-offwhite hover:text-custom transition-colors cursor-pointer"
@@ -46,5 +46,3 @@ const Logo: FC = () => {
     </svg>
   )
 }
-
-export default Logo
