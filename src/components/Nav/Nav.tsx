@@ -6,24 +6,20 @@ import useLocalStorage from '../../hooks/useLocalStorage'
 import { MobileNav } from './MobileNav'
 import { motion, AnimatePresence } from 'framer-motion'
 
+type Nav = 'home' | 'about' | 'projects' | 'blogs' | 'contacts'
+
 export const Nav: FC = () => {
+  const size = useWindowSize()
   const [where, setWhere] = useState<string>('home')
   const [nav, setNav] = useState<boolean>(false)
-  const size = useWindowSize()
   const [tab, setTab] = useLocalStorage<any>('nav', 'home')
 
-  const navigation: string[] = [
-    'home',
-    'about',
-    'projects',
-    'blogs',
-    'contacts',
-  ]
+  const navigation: Nav[] = ['home', 'about', 'projects', 'blogs', 'contacts']
 
   const whereHandler = (_tab: string) => {
     setWhere(_tab)
     setTab(_tab)
-    setNav(false)
+    size.width <= 768 && setNav(false)
   }
 
   useEffect(() => {

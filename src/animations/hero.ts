@@ -1,9 +1,9 @@
 export const IntroAnim = {
   hidden: {
-    x: 0,
+    x: -6,
   },
   visible: {
-    x: '-2rem',
+    x: 0,
     transition: {
       delay: 0.3,
       duration: 0.5,

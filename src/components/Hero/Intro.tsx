@@ -2,10 +2,11 @@ import React, { FC } from 'react'
 import { motion } from 'framer-motion'
 import { IntroAnim } from '@/animations/hero'
 import TextLoop from 'react-text-loop'
+import { Button } from '../UI'
 
 export const Intro: FC = () => {
   return (
-    <motion.div layout className="text-7xl sm:text-8xl">
+    <div className="text-5xl sm:text-7xl md:text-8xl">
       <motion.div
         initial="hidden"
         animate="visible"
@@ -27,7 +28,7 @@ export const Intro: FC = () => {
       >
         <span className="mr-4">I'm</span>
         <svg
-          className="h-14 sm:h-20"
+          className="h-12 sm:h-14 md:h-20"
           viewBox="0 0 64 63"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -75,6 +76,10 @@ export const Intro: FC = () => {
         </svg>
         <span>ervin</span>
       </motion.div>
-    </motion.div>
+      <div className="flex flex-col justify-center items-center gap-2 mt-5">
+        <Button animD="left">My Work</Button>
+        <Button animD="right">Contact Me</Button>
+      </div>
+    </div>
   )
 }

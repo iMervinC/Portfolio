@@ -3,7 +3,7 @@ import { Intro, Image } from '@/components/Hero'
 
 export const Hero: FC = () => {
   return (
-    <div className="flex items-center justify-center lg:justify-around h-screen flex-col-reverse lg:flex-row gap-5 lg:gap-10">
+    <div className="flex items-center justify-center lg:justify-around h-hero-m sm:h-hero flex-col-reverse lg:flex-row gap-10 lg:gap-10">
       <Intro />
       <Image />
     </div>

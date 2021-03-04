@@ -18,6 +18,10 @@ module.exports = {
       container: {
         padding: '2rem',
       },
+      height: {
+        hero: 'calc(100vh - 4rem)',
+        'hero-m': 'calc(100vh - 8rem)',
+      },
     },
   },
   variants: {

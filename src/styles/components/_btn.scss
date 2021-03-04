@@ -1,0 +1,31 @@
+.btn__hover {
+  position: relative;
+
+  &::before {
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border: 2px solid white;
+    border-radius: 0.4rem;
+    opacity: 0;
+  }
+  &:hover::before {
+    animation: button 1s;
+    transform: scale(1);
+  }
+}
+
+@keyframes button {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}

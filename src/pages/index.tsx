@@ -4,7 +4,7 @@ import { PageWrap } from '@/components/UI'
 
 const Home: FC = () => {
   return (
-    <PageWrap title={'iMervinC | Home'}>
+    <PageWrap title={'Home'}>
       <Hero />
       <div className="flex flex-col gap-10 text-4xl sm:text-5xl ">
         <p>Welcome to my slice🍕 of the internet</p>
