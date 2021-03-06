@@ -12,6 +12,7 @@ module.exports = {
       colors: {
         custom: {
           DEFAULT: '#00E0EE',
+          translucent: 'rgba(62, 243, 255, 0.7)',
           offwhite: '#E5E5E5',
         },
       },
@@ -25,7 +26,10 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      transform: ['hover', 'focus', 'active'],
+      translate: ['active'],
+    },
   },
   plugins: [],
 }

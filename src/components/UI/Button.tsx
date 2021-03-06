@@ -14,7 +14,6 @@ const Button: FC<{ animD?: 'left' | 'right' }> = ({ children, animD }) => {
       initial="hidden"
       animate={animD}
       transition={{ delay: 0.3, duration: 0.8 }}
-      whileTap={{ scale: 0.95 }}
       className="btn btn__hover"
     >
       {children}

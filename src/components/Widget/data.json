@@ -1,0 +1,13 @@
+[
+  {
+    "title": "Howler",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea ipsam aperiam veritatis odio magni quos animi reiciendis praesentium numquam, sit ullam, fuga accusamus sed. Fugit ratione expedita quasi assumenda illum.",
+    "tech": {
+      "frontend": ["react", "nextjs", "react-query"],
+      "backend": ["mongodb"]
+    },
+    "url": "https://howler-omega.vercel.app/",
+    "source": "https://github.com/iMervinC/Howler",
+    "blog": ""
+  }
+]
