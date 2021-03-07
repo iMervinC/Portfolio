@@ -1,13 +1,21 @@
 [
   {
     "title": "Howler",
-    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea ipsam aperiam veritatis odio magni quos animi reiciendis praesentium numquam, sit ullam, fuga accusamus sed. Fugit ratione expedita quasi assumenda illum.",
+    "preview": "https://raw.githubusercontent.com/iMervinC/Howler/main/howlPrev.gif",
+    "description": "A \"twitter\" clone app built using NextJS. Users can share what their thoughts are at the moment. Users can edit or delete their own howls. This project implements Nextjs API routes to handle our backend logic a.k.a our API, MongoDB to store our data, next-auth for authentication using Github's OAuth, react-query to handle asynchronous data fetching and caching.",
     "tech": {
-      "frontend": ["react", "nextjs", "react-query"],
-      "backend": ["mongodb"]
+      "frontend": [
+        "react",
+        "nextjs",
+        "react-query",
+        "tailwindcss",
+        "framer-motion"
+      ],
+      "backend": ["mongodb", "nextjs"]
     },
     "url": "https://howler-omega.vercel.app/",
     "source": "https://github.com/iMervinC/Howler",
-    "blog": ""
+    "blog": "",
+    "featured": true
   }
 ]
