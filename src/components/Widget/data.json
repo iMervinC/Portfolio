@@ -36,7 +36,7 @@
   },
   {
     "title": "My Portfolio",
-    "logo": "https://raw.githubusercontent.com/iMervinC/Portfolio/52a321837edfa8f5e51d8a9bb4f53513590df574/public/logo.svg",
+    "logo": "https://raw.githubusercontent.com/iMervinC/Portfolio/a56deedb3fd8a57f9e54267bf3ead4b0996afd24/public/BlackLogo.svg",
     "preview": "https://raw.githubusercontent.com/iMervinC/Pokedex/main/ezgif-7-05087edcaa3b.gif",
     "description": "Gotta Catch 'Em All! My version of the Pokédex using Pokeapi.com's public API. Pokedex list should only fetch 10 pokemon on load, but be able to load more when scrolling/infinite scrolling.",
     "tech": {

@@ -1,6 +1,7 @@
 import { ProjCard } from '@/components/UI'
 import projects from './data.json'
 
+//grid grid-cols-1 md:grid-cols-3
 export const Featured = () => {
   const data = projects
   return (
