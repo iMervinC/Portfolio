@@ -14,10 +14,10 @@ export const Intro: FC = () => {
         className="text-center transform sm:-translate-x-8"
       >
         <TextLoop>
+          <div>👋Kumusta</div>
           <div>🌊Ahoy</div>
           <div>🌺Aloha</div>
           <div>🤠Howdy</div>
-          <div>👋🏻Ciao</div>
         </TextLoop>
       </motion.div>
       <motion.div

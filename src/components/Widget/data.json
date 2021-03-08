@@ -1,12 +1,14 @@
 [
   {
     "title": "Howler",
+    "logo": "https://raw.githubusercontent.com/iMervinC/Howler/529bad7374f5544c2d335a67a581a92469553734/public/pic1.svg",
     "preview": "https://raw.githubusercontent.com/iMervinC/Howler/main/howlPrev.gif",
     "description": "A \"twitter\" clone app built using NextJS. Users can share what their thoughts are at the moment. Users can edit or delete their own howls. This project implements Nextjs API routes to handle our backend logic a.k.a our API, MongoDB to store our data, next-auth for authentication using Github's OAuth, react-query to handle asynchronous data fetching and caching.",
     "tech": {
       "frontend": [
         "react",
         "nextjs",
+        "typescript",
         "react-query",
         "tailwindcss",
         "framer-motion"
@@ -15,6 +17,40 @@
     },
     "url": "https://howler-omega.vercel.app/",
     "source": "https://github.com/iMervinC/Howler",
+    "blog": "",
+    "featured": true
+  },
+  {
+    "title": "Pokédex",
+    "logo": "https://raw.githubusercontent.com/iMervinC/Pokedex/beadf54a251671e74d6abbfa44c3dffb5bcb3658/public/pokeballColored.svg",
+    "preview": "https://raw.githubusercontent.com/iMervinC/Pokedex/main/ezgif-7-05087edcaa3b.gif",
+    "description": "Gotta Catch 'Em All! My version of the Pokédex using Pokeapi.com's public API. Pokedex list should only fetch 10 pokemon on load, but be able to load more when scrolling/infinite scrolling.",
+    "tech": {
+      "frontend": ["react", "redux", "sass", "framer-motion"],
+      "backend": []
+    },
+    "url": "https://pokedex-imervinc.vercel.app",
+    "source": "https://github.com/iMervinC/Pokedex",
+    "blog": "",
+    "featured": true
+  },
+  {
+    "title": "My Portfolio",
+    "logo": "https://raw.githubusercontent.com/iMervinC/Portfolio/52a321837edfa8f5e51d8a9bb4f53513590df574/public/logo.svg",
+    "preview": "https://raw.githubusercontent.com/iMervinC/Pokedex/main/ezgif-7-05087edcaa3b.gif",
+    "description": "Gotta Catch 'Em All! My version of the Pokédex using Pokeapi.com's public API. Pokedex list should only fetch 10 pokemon on load, but be able to load more when scrolling/infinite scrolling.",
+    "tech": {
+      "frontend": [
+        "react",
+        "typescript",
+        "nextjs",
+        "tailwindcss",
+        "framer-motion"
+      ],
+      "backend": []
+    },
+    "url": "https://pokedex-imervinc.vercel.app",
+    "source": "https://github.com/iMervinC/Pokedex",
     "blog": "",
     "featured": true
   }
