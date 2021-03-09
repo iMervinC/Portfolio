@@ -1,5 +1,7 @@
 .btn__hover {
   position: relative;
+  // -moz-outline-radius: 0.5rem;
+  // outline: white solid 2px;
 
   &::before {
     content: '';

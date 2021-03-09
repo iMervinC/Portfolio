@@ -1,15 +1,16 @@
-import { AppProps } from 'next/app'
 import '@/styles/tailwind.css'
 import '@/styles/directives.css'
 import '@/styles/main.scss'
+import { AppProps } from 'next/app'
 import { Nav } from '@/components/Nav'
 import { Frame } from '@/components/UI'
-import { motion, AnimatePresence } from 'framer-motion'
 import { pageAnim } from '@/animations/frame'
+import { NavProvider } from '@/hooks/useCtxNav'
+import { motion, AnimatePresence } from 'framer-motion'
 
 export default function App({ Component, pageProps, router }: AppProps) {
   return (
-    <>
+    <NavProvider>
       <Frame />
       <Nav />
       <AnimatePresence>
@@ -23,6 +24,6 @@ export default function App({ Component, pageProps, router }: AppProps) {
           <Component {...pageProps} />
         </motion.div>
       </AnimatePresence>
-    </>
+    </NavProvider>
   )
 }

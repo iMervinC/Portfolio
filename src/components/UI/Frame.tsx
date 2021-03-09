@@ -1,4 +1,3 @@
-import React from 'react'
 import { motion } from 'framer-motion'
 import { frameX, frameY } from '@/animations/frame'
 import useWindowSize from '@/hooks/useWindowSize'
@@ -16,12 +15,14 @@ export const Frame = () => {
             variants={frameX}
             className="frame-v left-0 bg-custom-offwhite"
           ></motion.div>
-          {/* <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={frameX}
-            className="frame-v right-0 bg-custom-offwhite"
-          ></motion.div> */}
+          {
+            // <motion.div
+            //   initial="hidden"
+            //   animate="visible"
+            //   variants={frameX}
+            //   className="frame-v right-0 bg-custom-offwhite"
+            // ></motion.div>
+          }
           <motion.div
             initial="hidden"
             animate="visible"

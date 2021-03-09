@@ -2,7 +2,10 @@ import React, { FC } from 'react'
 
 const ProjCard = ({ title, tech, logo }) => {
   return (
-    <div className="flex flex-col cursor-pointer bg-custom-translucent hover:bg-custom p-4 rounded-md hover:text-black text-custom-offwhite transition-colors duration-500 ease-in-out">
+    <div
+      className="flex flex-col cursor-pointer  p-4 rounded-md border-2 border-solid border-white text-custom-offwhite 
+    hover:text-custom  transition-all duration-200 ease-in-out hover:shadow-custom transform hover:-translate-y-1 hover:translate-x-1"
+    >
       <span className="flex space-x-2 mb-2">
         <img src={logo} alt={title} className="h-10 w-10" />
         <h3 className="text-3xl self-end">{title}</h3>

@@ -8,7 +8,6 @@ const Home: FC = () => {
     <PageWrap title={'Home'}>
       <Hero />
       <Introduction />
-      <Featured />
     </PageWrap>
   )
 }

@@ -3,6 +3,7 @@ import Head from 'next/head'
 
 interface Layout {
   title: string
+  otherPage?: boolean
 }
 
 export const PageWrap: FC<Layout> = ({ title, children }) => {

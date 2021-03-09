@@ -1,71 +1,70 @@
 import { FC, useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Logo } from '../UI'
-import useWindowSize from '../../hooks/useWindowSize'
-import useLocalStorage from '../../hooks/useLocalStorage'
-import { MobileNav } from './MobileNav'
 import { motion, AnimatePresence } from 'framer-motion'
-
-type Nav = 'home' | 'about' | 'projects' | 'blogs' | 'contacts'
+import { Logo } from '../UI'
+import { MobileNav } from './MobileNav'
+import { NavType } from '@/utils/types'
+import useWindowSize from '@/hooks/useWindowSize'
+import useCtxNav from '@/hooks/useCtxNav'
 
 export const Nav: FC = () => {
   const size = useWindowSize()
-  const [where, setWhere] = useState<string>('home')
-  const [nav, setNav] = useState<boolean>(false)
-  const [tab, setTab] = useLocalStorage<any>('nav', 'home')
+  const [nav, setNav] = useCtxNav()
+  const [isOpen, setisOpen] = useState<boolean>(false)
 
-  const navigation: Nav[] = ['home', 'about', 'projects', 'blogs', 'contacts']
+  const navigation: NavType[] = [
+    'home',
+    'about',
+    'projects',
+    'blogs',
+    'contacts',
+  ]
 
-  const whereHandler = (_tab: string) => {
-    setWhere(_tab)
-    setTab(_tab)
-    size.width <= 768 && setNav(false)
+  const navHandler = (_tab: NavType) => {
+    setNav(_tab)
+    size.width <= 768 && setisOpen(false)
   }
-
-  useEffect(() => {
-    setWhere(tab)
-  }, [])
 
   return (
     <nav className="nav">
       <Link scroll={false} href="/">
-        <a onClick={() => whereHandler('home')}>
+        <a onClick={() => navHandler('home')}>
           <Logo />
         </a>
       </Link>
       <div className="flex justify-between items-center">
         {size.width <= 768 ? (
           <AnimatePresence>
-            {nav && (
+            {isOpen && (
               <MobileNav
                 navigation={navigation}
-                where={where}
-                whereHandler={whereHandler}
+                where={nav}
+                navHandler={navHandler}
               />
             )}
           </AnimatePresence>
         ) : (
           <AnimatePresence>
-            {nav && (
+            {isOpen && (
               <motion.ul
                 initial={{ x: 100, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 exit={{ x: 25, opacity: 0 }}
                 className="font-bold flex gap-10 text-xl mr-2"
               >
-                {navigation.map((nav, index) => (
+                {navigation.map((_nav, index) => (
                   <Link
                     scroll={false}
                     key={index}
-                    href={nav === 'home' ? '/' : `/${nav}`}
+                    href={_nav === 'home' ? '/' : `/${_nav}`}
                   >
-                    <a onClick={() => whereHandler(nav)}>
+                    <a onClick={() => navHandler(_nav)}>
                       <li
                         className={`uppercase hover:text-custom transition duration-500 ${
-                          nav === where && 'text-custom'
+                          nav === _nav && 'text-custom'
                         }`}
                       >
-                        {nav}
+                        {_nav}
                       </li>
                     </a>
                   </Link>
@@ -77,26 +76,26 @@ export const Nav: FC = () => {
 
         <div
           id="nav-icon4"
-          className={`${size.width <= 768 && 'ml-auto'} ${nav && 'open-n'}`}
-          onClick={() => setNav(!nav)}
+          className={`${size.width <= 768 && 'ml-auto'} ${isOpen && 'open-n'}`}
+          onClick={() => setisOpen(!isOpen)}
         >
           <span
             className={
-              !nav
+              !isOpen
                 ? `bg-custom-offwhite`
                 : `bg-custom` + ' transition-colors duration-500'
             }
           ></span>
           <span
             className={
-              !nav
+              !isOpen
                 ? `bg-custom-offwhite`
                 : `bg-custom` + ' transition-colors duration-500'
             }
           ></span>
           <span
             className={
-              !nav
+              !isOpen
                 ? `bg-custom-offwhite`
                 : `bg-custom` + ' transition-colors duration-500'
             }

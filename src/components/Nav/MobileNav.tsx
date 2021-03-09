@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 
-export const MobileNav = ({ navigation, where, whereHandler }) => {
+export const MobileNav = ({ navigation, where, navHandler }) => {
   return (
     <motion.ul
       className="nav-mobile right-0"
@@ -17,7 +17,7 @@ export const MobileNav = ({ navigation, where, whereHandler }) => {
           key={index}
           href={nav === 'home' ? '/' : `/${nav}`}
         >
-          <a onClick={() => whereHandler(nav)}>
+          <a onClick={() => navHandler(nav)}>
             <li
               style={{ WebkitTextStroke: '1px black' }}
               className={`uppercase hover:text-custom transition duration-500 ${
