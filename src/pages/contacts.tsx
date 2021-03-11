@@ -3,7 +3,7 @@ import { Globe, PageWrap } from '@/components/UI'
 
 const contacts: FC = () => {
   return (
-    <PageWrap title={'contacts'}>
+    <PageWrap title={'Contacts'}>
       <div className="h-screen w-full flex items-center justify-center flex-col">
         <Globe fill1="#745C97" fill2="#39375B">
           <h2

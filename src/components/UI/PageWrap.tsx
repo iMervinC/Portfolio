@@ -13,7 +13,7 @@ export const PageWrap: FC<Layout> = ({ title, children }) => {
         <title>{title} | iMervinC</title>
         <link rel="icon" href="/logo.svg" />
       </Head>
-      <main className="mb-32">{children}</main>
+      <main className="pb-32">{children}</main>
     </div>
   )
 }

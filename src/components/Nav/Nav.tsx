@@ -105,3 +105,21 @@ export const Nav: FC = () => {
     </nav>
   )
 }
+
+export const NavFooter = () => {
+  return (
+    <nav className="text-2xl sm:text-4xl pt-10">
+      <ul className="flex space-x-8">
+        <a href="https://github.com/iMervinC" target="_blank">
+          <li className="nav-item-footer nav-footer">Github</li>
+        </a>
+        <Link scroll={false} href="/projects">
+          <a>
+            <li className="nav-item-footer nav-footer">Projects</li>
+          </a>
+        </Link>
+        <li className="nav-item-footer nav-footer">Resumé</li>
+      </ul>
+    </nav>
+  )
+}

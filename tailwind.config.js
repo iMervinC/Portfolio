@@ -24,7 +24,8 @@ module.exports = {
         'hero-m': 'calc(100vh - 8rem)',
       },
       boxShadow: {
-        custom: '-4px 4px 0 0 rgba(62, 243, 255, 0.7)',
+        custom: '-8px 8px 0 0 rgba(62, 243, 255, 0.7)',
+        active: '-4px 4px 0 0 rgba(62, 243, 255, 0.7)',
       },
     },
   },
@@ -32,6 +33,7 @@ module.exports = {
     extend: {
       transform: ['hover', 'focus', 'active'],
       translate: ['active'],
+      boxShadow: ['active'],
     },
   },
   plugins: [],

@@ -15,14 +15,14 @@ export const Frame = () => {
             variants={frameX}
             className="frame-v left-0 bg-custom-offwhite"
           ></motion.div>
-          {
-            // <motion.div
-            //   initial="hidden"
-            //   animate="visible"
-            //   variants={frameX}
-            //   className="frame-v right-0 bg-custom-offwhite"
-            // ></motion.div>
-          }
+          {/* 
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={frameX}
+            className="frame-v right-0 bg-custom-offwhite"
+          ></motion.div> */}
+
           <motion.div
             initial="hidden"
             animate="visible"

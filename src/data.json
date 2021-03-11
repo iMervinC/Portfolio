@@ -16,9 +16,7 @@
       "backend": ["mongodb", "nextjs"]
     },
     "url": "https://howler-omega.vercel.app/",
-    "source": "https://github.com/iMervinC/Howler",
-    "blog": "",
-    "featured": true
+    "source": "https://github.com/iMervinC/Howler"
   },
   {
     "title": "Pokédex",
@@ -30,9 +28,7 @@
       "backend": []
     },
     "url": "https://pokedex-imervinc.vercel.app",
-    "source": "https://github.com/iMervinC/Pokedex",
-    "blog": "",
-    "featured": true
+    "source": "https://github.com/iMervinC/Pokedex"
   },
   {
     "title": "My Portfolio",
@@ -50,8 +46,30 @@
       "backend": []
     },
     "url": "https://imervinc.com",
-    "source": "https://github.com/iMervinC/portfolio",
-    "blog": "",
-    "featured": true
+    "source": "https://github.com/iMervinC/portfolio"
+  },
+  {
+    "title": "Todo App",
+    "logo": "https://raw.githubusercontent.com/iMervinC/Portfolio/cba806741e37b79afe614f984588ca7ceafa67b3/public/logo.svg",
+    "preview": "https://raw.githubusercontent.com/iMervinC/TodoApp/main/design/desktop-preview.jpg",
+    "description": "The obligatory Todo App! The app is sortable, can reorder items, and with dark mode. The design came from a coding challenge in frontendmentor.io",
+    "tech": {
+      "frontend": ["react", "sass"],
+      "backend": []
+    },
+    "url": "https://todo-app.imervinc.vercel.app",
+    "source": "https://github.com/iMervinC/TodoApp"
+  },
+  {
+    "title": "REST Countries",
+    "logo": "https://raw.githubusercontent.com/iMervinC/Portfolio/cba806741e37b79afe614f984588ca7ceafa67b3/public/logo.svg",
+    "preview": "https://github.com/iMervinC/rest-countries/blob/main/design/desktop-preview.jpg?raw=true",
+    "description": "Another coding challenge frontendmentor.io. The challenge is to integrate with the REST Countries API from restcountries.eu to pull country data and display it like the designs.",
+    "tech": {
+      "frontend": ["react", "sass"],
+      "backend": []
+    },
+    "url": "https://todo-app.imervinc.vercel.app",
+    "source": "https://github.com/iMervinC/TodoApp"
   }
 ]
