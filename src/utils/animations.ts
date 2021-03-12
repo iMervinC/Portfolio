@@ -4,7 +4,7 @@ export const listContainer = {
   },
   visible: {
     y: 0,
-    transition: { type: 'tween', delayChildren: 0.5, staggerChildren: 0.2 },
+    transition: { type: 'tween', delayChildren: 0.7, staggerChildren: 0.2 },
   },
   exit: {
     opacity: 0,

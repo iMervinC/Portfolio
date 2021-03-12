@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { wave, wave2 } from '@/animations/wave'
 
 interface GlobeType {
