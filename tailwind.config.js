@@ -14,6 +14,7 @@ module.exports = {
           DEFAULT: '#00E0EE',
           translucent: 'rgba(62, 243, 255, 0.7)',
           offwhite: '#E5E5E5',
+          'trans-black': 'rgba(0,0,0,.7)',
         },
       },
       container: {

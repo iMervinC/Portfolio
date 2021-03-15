@@ -1,14 +1,17 @@
 import { FC } from 'react'
+import { motion } from 'framer-motion'
 
-const TechCard: FC<{ tech: 'frontend' | 'backend'; data: string[] }> = ({
-  tech,
-  data,
-}) => {
+const TechCard: FC<{
+  tech: 'frontend' | 'backend'
+  data: string[]
+  title: string
+}> = ({ tech, data, title }) => {
   if (data.length <= 0) return null
 
   return (
-    <div
-      className={`flex flex-col flex-1 text-custom-offwhite p-2 rounded-md sm:w-1/2 transform hover:scale-105 transition-transform ${
+    <motion.div
+      layoutId={tech === 'frontend' ? `${title}-frontend` : `${title}-backend`}
+      className={`flex flex-col flex-1 text-custom-offwhite p-2 rounded-md sm:w-1/2 ${
         tech === 'frontend'
           ? 'bg-blue-500'
           : tech === 'backend' && 'bg-purple-800'
@@ -27,7 +30,7 @@ const TechCard: FC<{ tech: 'frontend' | 'backend'; data: string[] }> = ({
           />
         ))}
       </span>
-    </div>
+    </motion.div>
   )
 }
 
