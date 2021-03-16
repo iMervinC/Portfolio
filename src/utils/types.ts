@@ -12,3 +12,7 @@ export interface Data {
   url: string
   source: string
 }
+
+export interface ProjData extends Data {
+  onClick?: () => void
+}
