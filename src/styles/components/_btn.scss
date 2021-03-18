@@ -24,10 +24,53 @@
   0% {
     transform: scale(1);
     opacity: 1;
+    border: 2px solid white;
   }
 
   100% {
     transform: scale(1.2);
     opacity: 0;
+    border: 4px solid white;
+  }
+}
+
+@keyframes close {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.btn-close {
+  cursor: pointer;
+
+  & > div {
+    background-color: rgb(80, 80, 80);
+  }
+
+  &:hover > div {
+    background-color: rgba(255, 255, 255, 1);
+  }
+
+  &::before {
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border: 2px solid white;
+    border-radius: 9999rem;
+    opacity: 0;
+  }
+
+  &:hover::before {
+    animation: close 1s;
+    transform: scale(1.5);
   }
 }

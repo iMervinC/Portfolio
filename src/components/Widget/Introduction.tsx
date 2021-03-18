@@ -25,7 +25,10 @@ export const Introduction = () => {
         <ColoredText>MongoDB</ColoredText> to build{' '}
         <ColoredText>fullstack</ColoredText> apps.
       </p>
-      <p>If you fancy a chat feel free to drop me a line.</p>
+      <p>
+        If you fancy a chat feel free to{' '}
+        <ColoredText>drop me a line.</ColoredText>
+      </p>
       <NavFooter />
     </div>
   )

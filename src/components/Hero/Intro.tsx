@@ -1,10 +1,13 @@
 import React, { FC } from 'react'
+import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
 import { IntroAnim } from '@/animations/hero'
 import TextLoop from 'react-text-loop'
 import { Button } from '../UI'
 
 export const Intro: FC = () => {
+  const router = useRouter()
+
   return (
     <div className="text-5xl sm:text-7xl md:text-8xl">
       <motion.div
@@ -14,10 +17,10 @@ export const Intro: FC = () => {
         className="text-center transform sm:-translate-x-8"
       >
         <TextLoop>
-          <div>👋Kumusta</div>
-          <div>🌊Ahoy</div>
-          <div>🌺Aloha</div>
-          <div>🤠Howdy</div>
+          <span>👋Kumusta</span>
+          <span>🌊Ahoy</span>
+          <span>🌺Aloha</span>
+          <span>🤠Howdy</span>
         </TextLoop>
       </motion.div>
       <motion.div
@@ -77,8 +80,12 @@ export const Intro: FC = () => {
         <span>ervin</span>
       </motion.div>
       <div className="flex flex-col justify-center items-center gap-2 mt-5">
-        <Button animD="left">My Work</Button>
-        <Button animD="right">Contact Me</Button>
+        <Button animD="left" onClick={() => router.push('/projects')}>
+          My Work
+        </Button>
+        <Button animD="right" onClick={() => router.push('/contacts')}>
+          Contact Me
+        </Button>
       </div>
     </div>
   )

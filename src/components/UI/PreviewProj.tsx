@@ -1,19 +1,8 @@
 import { FC, useState } from 'react'
 import { motion } from 'framer-motion'
-import { TechCard } from '@/components/UI'
+import { TechCard, CloseBtn } from '@/components/UI'
 import { ProjData } from '@/utils/types'
-
-const prevAnim = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-  },
-  exit: {
-    opacity: 0,
-  },
-}
+import { prevAnim } from '@/utils/animations'
 
 export const PreviewProj: FC<ProjData> = ({
   title,
@@ -21,6 +10,8 @@ export const PreviewProj: FC<ProjData> = ({
   logo,
   preview,
   description,
+  source,
+  url,
   onClick,
 }) => {
   const [readMore, setReadMore] = useState<boolean>(false)
@@ -33,9 +24,10 @@ export const PreviewProj: FC<ProjData> = ({
       <motion.div
         layout
         layoutId={title}
-        className="flex flex-col lg:flex-row gap-5 bg-black p-5 rounded-md border-2 border-white border-solid sm:w-3/5"
+        className="relative max-h-screen flex flex-col lg:flex-row gap-5 bg-black p-5 rounded-md border-2 border-white border-solid sm:w-3/5 overflow-auto overflow-x-hidden"
         onClick={(e) => e.stopPropagation()}
       >
+        <CloseBtn onClick={onClick} />
         <motion.img
           variants={prevAnim}
           initial="hidden"
@@ -43,7 +35,7 @@ export const PreviewProj: FC<ProjData> = ({
           exit="exit"
           src={preview}
           alt={title}
-          className="h-80 w-96 bg-custom self-center sm:self-start"
+          className="h-80 w-96 bg-custom self-center sm:self-start rounded-md"
         />
         <motion.div className="flex flex-col gap-2">
           <motion.span
@@ -58,24 +50,51 @@ export const PreviewProj: FC<ProjData> = ({
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="flex-1"
+            className="flex-1 sm:text-lg"
           >
             {description.length < 250
               ? description
               : readMore
               ? description
               : description.substring(0, 200).padEnd(203, '.')}
+            {description.length > 250 && (
+              <span
+                className="hover:text-custom cursor-pointer"
+                onClick={() => setReadMore((read) => !read)}
+              >{`${readMore ? 'Read Less' : 'Read More'}`}</span>
+            )}
           </motion.span>
-          {description.length > 250 && (
-            <span
-              className="hover:text-custom"
-              onClick={() => setReadMore((read) => !read)}
-            >{`${readMore ? 'Read Less' : 'Read More'}`}</span>
-          )}
           <div className="flex flex-col sm:flex-row gap-2 mt-auto">
             <TechCard title={title} tech="frontend" data={tech.frontend} />
             <TechCard title={title} tech="backend" data={tech.backend} />
           </div>
+
+          <motion.div
+            variants={prevAnim}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            className="flex flex-start space-x-5"
+          >
+            <a
+              href={source}
+              target="_blank"
+              className="flex items-center w-fit space-x-2"
+            >
+              <img src="/logos/github.svg" alt="github" className="w-7 h-7" />
+              <span className="links hover:text-custom text-lg">
+                Source Code
+              </span>
+            </a>
+            <a
+              href={url}
+              target="_blank"
+              className="flex items-center w-fit space-x-2 "
+            >
+              <img src="/logos/live.svg" alt="github" className="w-7 h-7" />
+              <span className="links hover:text-custom text-lg">Live Site</span>
+            </a>
+          </motion.div>
         </motion.div>
       </motion.div>
     </motion.div>

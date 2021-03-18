@@ -22,3 +22,15 @@ export const listItem = {
     opacity: 1,
   },
 }
+
+export const prevAnim = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+  },
+  exit: {
+    opacity: 0,
+  },
+}

@@ -28,3 +28,38 @@
     transition: width 200ms ease-out, background-color 200ms ease-out;
   }
 }
+
+.links {
+  position: relative;
+  &:hover:after {
+    width: 100%;
+    background-color: rgba(0, 224, 238);
+  }
+  img:hover + &::after {
+    width: 100%;
+    background-color: rgba(0, 224, 238);
+  }
+
+  &:after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 0px;
+    background: white;
+    bottom: 0px;
+    right: 50%;
+    transform: translateX(50%);
+    transition: width 500ms ease-out, background-color 500ms ease-out;
+  }
+  // &:before {
+  //   position: absolute;
+  //   content: '';
+  //   height: 2px;
+  //   width: 100%;
+  //   background: white;
+  //   bottom: 0px;
+  //   right: 50%;
+  //   transform: translateX(50%);
+  //   transition: width 200ms ease-out, background-color 200ms ease-out;
+  // }
+}

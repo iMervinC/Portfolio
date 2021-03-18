@@ -16,7 +16,8 @@
       "backend": ["mongodb", "nextjs"]
     },
     "url": "https://howler-omega.vercel.app/",
-    "source": "https://github.com/iMervinC/Howler"
+    "source": "https://github.com/iMervinC/Howler",
+    "featured": true
   },
   {
     "title": "Pokédex",
@@ -28,7 +29,8 @@
       "backend": []
     },
     "url": "https://pokedex-imervinc.vercel.app",
-    "source": "https://github.com/iMervinC/Pokedex"
+    "source": "https://github.com/iMervinC/Pokedex",
+    "featured": true
   },
   {
     "title": "My Portfolio",
@@ -46,7 +48,8 @@
       "backend": []
     },
     "url": "https://imervinc.com",
-    "source": "https://github.com/iMervinC/portfolio"
+    "source": "https://github.com/iMervinC/portfolio",
+    "featured": true
   },
   {
     "title": "Todo App",
@@ -58,10 +61,24 @@
       "backend": []
     },
     "url": "https://todo-app.imervinc.vercel.app",
-    "source": "https://github.com/iMervinC/TodoApp"
+    "source": "https://github.com/iMervinC/TodoApp",
+    "featured": true
   },
   {
     "title": "REST Countries",
+    "logo": "https://raw.githubusercontent.com/iMervinC/Portfolio/cba806741e37b79afe614f984588ca7ceafa67b3/public/logo.svg",
+    "preview": "https://github.com/iMervinC/rest-countries/blob/main/design/desktop-preview.jpg?raw=true",
+    "description": "Another coding challenge frontendmentor.io. The challenge is to integrate with the REST Countries API from restcountries.eu to pull country data and display it like the designs.",
+    "tech": {
+      "frontend": ["react", "sass"],
+      "backend": []
+    },
+    "url": "https://todo-app.imervinc.vercel.app",
+    "source": "https://github.com/iMervinC/TodoApp",
+    "featured": true
+  },
+  {
+    "title": "Moe",
     "logo": "https://raw.githubusercontent.com/iMervinC/Portfolio/cba806741e37b79afe614f984588ca7ceafa67b3/public/logo.svg",
     "preview": "https://github.com/iMervinC/rest-countries/blob/main/design/desktop-preview.jpg?raw=true",
     "description": "Another coding challenge frontendmentor.io. The challenge is to integrate with the REST Countries API from restcountries.eu to pull country data and display it like the designs.",

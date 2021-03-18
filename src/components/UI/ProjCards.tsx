@@ -6,8 +6,7 @@ import { Data, ProjData } from '@/utils/types'
 import projects from '@/data.json'
 
 const ProjCards = () => {
-  const data = projects
-  const [selectedId, setSelectedId] = useState<string>(null)
+  const data = projects.filter((proj) => proj.featured === true)
   const [selectedProj, setSelectedProj] = useState<Data>(null)
 
   return (
@@ -23,7 +22,6 @@ const ProjCards = () => {
             <ProjCard
               {...proj}
               onClick={() => {
-                setSelectedId(proj.title)
                 setSelectedProj(proj)
               }}
             />
@@ -31,11 +29,10 @@ const ProjCards = () => {
         ))}
       </motion.ul>
       <AnimatePresence>
-        {selectedId && (
+        {selectedProj && (
           <PreviewProj
             {...selectedProj}
             onClick={() => {
-              setSelectedId(null)
               setSelectedProj(null)
             }}
           />

@@ -7,8 +7,9 @@ const projects: FC = () => {
     <PageWrap title={'Projects'}>
       <div className="pt-40">
         <Featured />
-        <div className="text-6xl h-64">
-          <h1>Projects</h1>
+        <div className="mt-20">
+          <h1 className="text-5xl text-white">Projects</h1>
+          <div className="grid grid-cols-2"></div>
         </div>
       </div>
     </PageWrap>
