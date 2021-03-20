@@ -1,4 +1,4 @@
-import { FC, useState } from 'react'
+import { FC } from 'react'
 import { motion } from 'framer-motion'
 import { TechCard, CloseBtn } from '@/components/UI'
 import { ProjData } from '@/utils/types'
@@ -14,8 +14,6 @@ export const PreviewProj: FC<ProjData> = ({
   url,
   onClick,
 }) => {
-  const [readMore, setReadMore] = useState<boolean>(false)
-
   return (
     <motion.div
       className="flex fixed items-center justify-center top-0 left-0 h-screen w-screen bg-custom-trans-black z-50"
@@ -37,7 +35,7 @@ export const PreviewProj: FC<ProjData> = ({
           alt={title}
           className="h-80 w-96 bg-custom self-center sm:self-start rounded-md"
         />
-        <motion.div className="flex flex-col gap-2">
+        <motion.div className="flex flex-col gap-2 sm:h-80">
           <motion.span
             className="flex flex-row space-x-2 mb-2 w-fit"
             layoutId={`${title}-header`}
@@ -50,19 +48,9 @@ export const PreviewProj: FC<ProjData> = ({
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="flex-1 sm:text-lg"
+            className="sm:text-lg overflow-auto scroller"
           >
-            {description.length < 250
-              ? description
-              : readMore
-              ? description
-              : description.substring(0, 200).padEnd(203, '.')}
-            {description.length > 250 && (
-              <span
-                className="hover:text-custom cursor-pointer"
-                onClick={() => setReadMore((read) => !read)}
-              >{`${readMore ? 'Read Less' : 'Read More'}`}</span>
-            )}
+            {description}
           </motion.span>
           <div className="flex flex-col sm:flex-row gap-2 mt-auto">
             <TechCard title={title} tech="frontend" data={tech.frontend} />
@@ -82,9 +70,7 @@ export const PreviewProj: FC<ProjData> = ({
               className="flex items-center w-fit space-x-2"
             >
               <img src="/logos/github.svg" alt="github" className="w-7 h-7" />
-              <span className="links hover:text-custom text-lg">
-                Source Code
-              </span>
+              <span className="links hover:text-custom text-lg">Code</span>
             </a>
             <a
               href={url}
@@ -92,7 +78,7 @@ export const PreviewProj: FC<ProjData> = ({
               className="flex items-center w-fit space-x-2 "
             >
               <img src="/logos/live.svg" alt="github" className="w-7 h-7" />
-              <span className="links hover:text-custom text-lg">Live Site</span>
+              <span className="links hover:text-custom text-lg">Demo</span>
             </a>
           </motion.div>
         </motion.div>

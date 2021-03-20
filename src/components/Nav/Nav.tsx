@@ -107,6 +107,8 @@ export const Nav: FC = () => {
 }
 
 export const NavFooter = () => {
+  const [, setNav] = useCtxNav()
+
   return (
     <nav className="text-2xl sm:text-4xl pt-10">
       <ul className="flex space-x-8">
@@ -114,7 +116,7 @@ export const NavFooter = () => {
           <li className="nav-item-footer nav-footer">Github</li>
         </a>
         <Link scroll={false} href="/projects">
-          <a>
+          <a onClick={() => setNav('projects')}>
             <li className="nav-item-footer nav-footer">Projects</li>
           </a>
         </Link>

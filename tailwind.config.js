@@ -24,6 +24,7 @@ module.exports = {
       height: {
         hero: 'calc(100vh - 4rem)',
         'hero-m': 'calc(100vh - 8rem)',
+        preview: '340px',
       },
       width: {
         fit: 'fit-content',

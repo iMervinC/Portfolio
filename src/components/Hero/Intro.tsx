@@ -4,8 +4,10 @@ import { motion } from 'framer-motion'
 import { IntroAnim } from '@/animations/hero'
 import TextLoop from 'react-text-loop'
 import { Button } from '../UI'
+import useCtxNav from '@/hooks/useCtxNav'
 
 export const Intro: FC = () => {
+  const [, setNav] = useCtxNav()
   const router = useRouter()
 
   return (
@@ -80,10 +82,22 @@ export const Intro: FC = () => {
         <span>ervin</span>
       </motion.div>
       <div className="flex flex-col justify-center items-center gap-2 mt-5">
-        <Button animD="left" onClick={() => router.push('/projects')}>
+        <Button
+          animD="left"
+          onClick={() => {
+            router.push('/projects')
+            setNav('projects')
+          }}
+        >
           My Work
         </Button>
-        <Button animD="right" onClick={() => router.push('/contacts')}>
+        <Button
+          animD="right"
+          onClick={() => {
+            router.push('/contacts')
+            setNav('contacts')
+          }}
+        >
           Contact Me
         </Button>
       </div>
