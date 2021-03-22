@@ -1,6 +1,6 @@
 import { FC, useState } from 'react'
 import { motion, AnimateSharedLayout, AnimatePresence } from 'framer-motion'
-import { TechCard, PreviewProj } from '@/components/UI'
+import { TechCard, PreviewProj, PrevButton } from '@/components/UI'
 import { listContainer, listItem } from '@/utils/animations'
 import { Data, ProjData } from '@/utils/types'
 import projects from '@/data.json'
@@ -60,4 +60,16 @@ const ProjCard: FC<ProjData> = ({ title, tech, logo, onClick }) => {
   )
 }
 
-export { ProjCard, ProjCards }
+const ProjNorm = ({ title, url, source }) => {
+  return (
+    <div className="project-card-2 items-center mt-5">
+      <h4 className="text-4xl">{title}</h4>
+      <span className="flex justify-start space-x-5 text-custom-offwhite ml-auto">
+        <PrevButton onClick={() => console.log('hi')}>{`</> Code`}</PrevButton>
+        <PrevButton onClick={() => console.log('hi')}>👁 Demo</PrevButton>
+      </span>
+    </div>
+  )
+}
+
+export { ProjCard, ProjCards, ProjNorm }

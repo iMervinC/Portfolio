@@ -74,3 +74,39 @@
     transform: scale(1.5);
   }
 }
+
+.btn-proj {
+  background: linear-gradient(
+        -45deg,
+        rgb(250, 0, 0) 40%,
+        rgb(1, 255, 115) 0 60%,
+        black 0
+      )
+      right/300% 100% no-repeat,
+    linear-gradient(
+        -45deg,
+        transparent 40%,
+        rgb(255, 0, 0) 0 60%,
+        transparent 0
+      )
+      right/300% 100% no-repeat;
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+}
+.btn-proj :hover {
+  background-position: left;
+  transition: 0.8s;
+}
+
+.fancy-6 {
+  background: linear-gradient(45deg, #00e0ee 50%, transparent 0) right / 255%
+      100% no-repeat,
+    linear-gradient(45deg, transparent 50%, #00e0ee 0) left / 255% 100%
+      no-repeat;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.fancy-6:hover {
+  background-position: center;
+  color: rgb(0, 0, 0);
+}

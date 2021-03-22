@@ -22,7 +22,7 @@ export const PreviewProj: FC<ProjData> = ({
       <motion.div
         layout
         layoutId={title}
-        className="relative max-h-screen flex flex-col lg:flex-row gap-5 bg-black p-5 rounded-md border-2 border-white border-solid sm:w-3/5 overflow-auto overflow-x-hidden"
+        className="relative max-h-screen flex flex-col lg:flex-row gap-5 bg-black p-5 rounded-md border-2 border-white border-solid sm:w-3/5  overflow-x-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         <CloseBtn onClick={onClick} />

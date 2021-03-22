@@ -19,7 +19,7 @@ const Button: FC<{ animD?: 'left' | 'right'; onClick?: () => void }> = ({
       initial="hidden"
       animate={animD}
       transition={{ delay: 0.3, duration: 0.8 }}
-      className="btn btn__hover"
+      className="text-xl border-2 border-solid border-white hover:border-custom focus:outline-none px-10 py-2 rounded-lg fancy-6"
       onClick={onClick}
     >
       {children}
@@ -43,4 +43,15 @@ const CloseBtn = ({ onClick }) => {
   )
 }
 
-export { Button, CloseBtn }
+const PrevButton: FC<{ onClick: () => void }> = ({ children, onClick }) => {
+  return (
+    <div
+      onClick={onClick}
+      className="fancy-6 w-fit px-4 py-1 text-xl rounded-md border-2 border-solid hover:border-custom"
+    >
+      {children}
+    </div>
+  )
+}
+
+export { Button, CloseBtn, PrevButton }

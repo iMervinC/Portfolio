@@ -1,6 +1,6 @@
+import '@/styles/main.scss'
 import '@/styles/tailwind.css'
 import '@/styles/directives.css'
-import '@/styles/main.scss'
 import { AppProps } from 'next/app'
 import { Nav } from '@/components/Nav'
 import { Frame } from '@/components/UI'
