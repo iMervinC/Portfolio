@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { TechCard, CloseBtn } from '@/components/UI'
 import { ProjData } from '@/utils/types'
 import { prevAnim } from '@/utils/animations'
+import { PrevButton } from './Button'
 
 export const PreviewProj: FC<ProjData> = ({
   title,
@@ -26,16 +27,21 @@ export const PreviewProj: FC<ProjData> = ({
         onClick={(e) => e.stopPropagation()}
       >
         <CloseBtn onClick={onClick} />
-        <motion.img
+        <motion.div
           variants={prevAnim}
           initial="hidden"
           animate="visible"
           exit="exit"
-          src={preview}
-          alt={title}
-          className="h-80 w-96 bg-custom self-center sm:self-start rounded-md"
-        />
-        <motion.div className="flex flex-col gap-2 sm:h-80">
+          className="h-80 w-[40rem] bg-custom rounded-md"
+        >
+          <img
+            src={preview}
+            alt={title}
+            className="h-80 w-[40rem] bg-custom self-center sm:self-start rounded-md"
+          />
+        </motion.div>
+
+        <motion.div className="flex flex-col gap-2 sm:h-80 w-full">
           <motion.span
             className="flex flex-row space-x-2 mb-2 w-fit"
             layoutId={`${title}-header`}
@@ -48,7 +54,7 @@ export const PreviewProj: FC<ProjData> = ({
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="sm:text-lg overflow-auto scroller"
+            className="sm:text-xl overflow-auto scroller"
           >
             {description}
           </motion.span>
@@ -64,22 +70,8 @@ export const PreviewProj: FC<ProjData> = ({
             exit="exit"
             className="flex flex-start space-x-5"
           >
-            <a
-              href={source}
-              target="_blank"
-              className="flex items-center w-fit space-x-2"
-            >
-              <img src="/logos/github.svg" alt="github" className="w-7 h-7" />
-              <span className="links hover:text-custom text-lg">Code</span>
-            </a>
-            <a
-              href={url}
-              target="_blank"
-              className="flex items-center w-fit space-x-2 "
-            >
-              <img src="/logos/live.svg" alt="github" className="w-7 h-7" />
-              <span className="links hover:text-custom text-lg">Demo</span>
-            </a>
+            <PrevButton link={url} type="demo" />
+            <PrevButton link={source} type="code" />
           </motion.div>
         </motion.div>
       </motion.div>

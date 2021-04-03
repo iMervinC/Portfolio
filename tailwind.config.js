@@ -29,6 +29,9 @@ module.exports = {
       width: {
         fit: 'fit-content',
       },
+      minWidth: {
+        fit: 'fit-content',
+      },
       boxShadow: {
         custom: '-8px 8px 0 0 rgba(62, 243, 255, 0.7)',
         active: '-4px 4px 0 0 rgba(62, 243, 255, 0.7)',
@@ -36,11 +39,7 @@ module.exports = {
     },
   },
   variants: {
-    extend: {
-      transform: ['hover', 'focus', 'active'],
-      translate: ['active'],
-      boxShadow: ['active'],
-    },
+    extend: {},
   },
   plugins: [],
 }

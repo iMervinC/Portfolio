@@ -44,7 +44,11 @@ const ProjCards = () => {
 
 const ProjCard: FC<ProjData> = ({ title, tech, logo, onClick }) => {
   return (
-    <motion.div layoutId={title} className="project-card" onClick={onClick}>
+    <motion.div
+      layoutId={title}
+      className="project-card min-w-fit"
+      onClick={onClick}
+    >
       <motion.span
         layoutId={`${title}-header`}
         className="flex space-x-2 mb-2 w-fit"
@@ -62,12 +66,12 @@ const ProjCard: FC<ProjData> = ({ title, tech, logo, onClick }) => {
 
 const ProjNorm = ({ title, url, source }) => {
   return (
-    <div className="project-card-2 items-center mt-5">
-      <h4 className="text-4xl">{title}</h4>
-      <span className="flex justify-start space-x-5 text-custom-offwhite ml-auto">
-        <PrevButton onClick={() => console.log('hi')}>{`</> Code`}</PrevButton>
-        <PrevButton onClick={() => console.log('hi')}>👁 Demo</PrevButton>
-      </span>
+    <div className="flex flex-col md:flex-row project-card-2 items-center mt-5 min-w-fit">
+      <h4 className="text-3xl w-full">{title}</h4>
+      <div className="flex  space-x-5 text-custom-offwhite sm:ml-auto mt-2 sm:mt-0">
+        <PrevButton link={url} type="demo" />
+        <PrevButton link={source} type="code" />
+      </div>
     </div>
   )
 }

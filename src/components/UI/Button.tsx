@@ -35,7 +35,7 @@ const CloseBtn = ({ onClick }) => {
       animate="visible"
       exit="exit"
       onClick={onClick}
-      className="bg-gray-800 hover:bg-gray-500 h-10 w-10 absolute right-2 top-2 flex items-center justify-center rounded-full btn-close"
+      className="bg-gray-800 hover:bg-gray-500 h-10 w-10 fixed sm:absolute right-2 top-2 flex items-center justify-center rounded-full btn-close"
     >
       <div className="w-5 h-1 rounded-lg transform -rotate-45 absolute"></div>
       <div className="w-5 h-1 rounded-lg transform rotate-45 absolute"></div>
@@ -43,14 +43,21 @@ const CloseBtn = ({ onClick }) => {
   )
 }
 
-const PrevButton: FC<{ onClick: () => void }> = ({ children, onClick }) => {
+const PrevButton: FC<{ type?: 'demo' | 'code'; link: string }> = ({
+  children,
+  link,
+  type,
+}) => {
   return (
-    <div
-      onClick={onClick}
-      className="fancy-6 w-fit px-4 py-1 text-xl rounded-md border-2 border-solid hover:border-custom"
+    <a
+      href={link}
+      target="_blank"
+      className="fancy-6 w-28 sm:w-32 text-center px-4 py-1 text-base sm:text-xl rounded-md border-2 border-solid hover:border-custom"
     >
-      {children}
-    </div>
+      <button>
+        {type === 'code' ? `</> Code` : type === 'demo' ? `👁 Demo` : children}
+      </button>
+    </a>
   )
 }
 
