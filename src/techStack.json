@@ -1,0 +1,24 @@
+{
+  "myStack": [
+    "react",
+    "javascript",
+    "typescript",
+    "nextjs",
+    "sass",
+    "tailwindcss",
+    "react-query",
+    "redux",
+    "html",
+    "css",
+    "nodejs",
+    "mongodb"
+  ],
+  "currentlyHacking": [
+    "typescript",
+    "tailwindcss",
+    "nextjs",
+    "react-query",
+    "mongodb"
+  ],
+  "interestingTech": ["jest", "graphql", "apollo"]
+}

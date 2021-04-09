@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
 import { IntroAnim } from '@/animations/hero'
 import TextLoop from 'react-text-loop'
-import { Button } from '../UI'
+import { Button, Looper } from '../UI'
 import useCtxNav from '@/hooks/useCtxNav'
 
 export const Intro: FC = () => {
@@ -24,6 +24,7 @@ export const Intro: FC = () => {
           <span>🌺Aloha</span>
           <span>🤠Howdy</span>
         </TextLoop>
+        {/* <Looper content={['👋Kumusta', '🌊Ahoy', '🌺Aloha', '🤠Howdy']} /> */}
       </motion.div>
       <motion.div
         initial="hidden"

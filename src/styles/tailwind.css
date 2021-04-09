@@ -27,7 +27,7 @@
 
 @layer components {
   .contain {
-    @apply mx-auto container;
+    @apply container;
   }
 
   .nav {

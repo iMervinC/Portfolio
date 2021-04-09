@@ -83,11 +83,50 @@
     "preview": "https://raw.githubusercontent.com/iMervinC/TodoApp/main/design/desktop-preview.jpg",
     "description": "ECommerce",
     "tech": {
-      "frontend": ["react", "bootstrap"],
+      "frontend": ["react", "redux", "bootstrap"],
       "backend": ["express", "nodejs"]
     },
     "url": "https://github.com/iMervinC/proshop",
     "source": "https://github.com/iMervinC/proshop",
     "featured": true
+  },
+  {
+    "title": "Firegram",
+    "logo": "https://raw.githubusercontent.com/iMervinC/Portfolio/cba806741e37b79afe614f984588ca7ceafa67b3/public/logo.svg",
+    "preview": "",
+    "description": "Simple image gallery using FIREBASE as backend",
+    "tech": {
+      "frontend": ["react", "framer-motion"],
+      "backend": ["firebase"]
+    },
+    "url": "https://firegram-eqfmc1dck.vercel.app/",
+    "source": "https://github.com/iMervinC/firegram",
+    "featured": false
+  },
+  {
+    "title": "Loopstudios",
+    "logo": "",
+    "preview": "https://github.com/iMervinC/loopstudios/blob/main/design/desktop-preview.jpg?raw=true",
+    "description": "Mobile first design using BEM and SASS built using Parcel",
+    "tech": {
+      "frontend": ["html", "sass", "javascript", "parcel"],
+      "backend": []
+    },
+    "url": "https://loopstudios-imervinc.vercel.app/",
+    "source": "https://github.com/iMervinC/loopstudios",
+    "featured": false
+  },
+  {
+    "title": "Social Media Dashboard",
+    "logo": "",
+    "preview": "https://res.cloudinary.com/dz209s6jk/image/upload/q_auto,w_900/Screenshots/kdhb1onz1p3br890yvad.jpg",
+    "description": "Social Media Dashboard with Theme Switch. Built in React",
+    "tech": {
+      "frontend": ["react", "sass"],
+      "backend": []
+    },
+    "url": "https://social-media-dashboard.imervinc.vercel.app/",
+    "source": "https://github.com/iMervinC/Social-Media-Dashboard",
+    "featured": false
   }
 ]

@@ -5,14 +5,13 @@ const contacts: FC = () => {
   return (
     <PageWrap title={'Contacts'}>
       <div className="h-screen w-full flex items-center justify-center flex-col">
-        <Globe fill1="#745C97" fill2="#39375B">
-          <h2
-            className="text-6xl self-center text-center z-30"
-            style={{ color: '#39375B', WebkitTextStroke: '1px white' }}
-          >
-            Men At Work!
-          </h2>
-        </Globe>
+        <h1 className="text-4xl sm:text-7xl uppercase">Contact Me!</h1>
+        <h2 className="text-custom sm:text-6xl mt-5">
+          Drop me a line if you fancy a chat
+        </h2>
+        <p className="sm:text-5xl hover:text-custom mt-16">
+          <a href="mailto:itorma.mervin@gmail.com">itorma.mervin@gmail.com</a>
+        </p>
       </div>
     </PageWrap>
   )

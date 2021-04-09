@@ -26,7 +26,7 @@ export const Nav: FC = () => {
   }
 
   return (
-    <nav className="nav contain">
+    <nav className="nav my-container">
       <Link scroll={false} href="/">
         <a onClick={() => navHandler('home')}>
           <Logo />

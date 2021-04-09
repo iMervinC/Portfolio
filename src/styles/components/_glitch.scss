@@ -1,0 +1,121 @@
+.glitch-it {
+  .char,
+  .char:before,
+  .char:after {
+    transition: color 0.2s ease;
+    animation-duration: 0.9s, 1s;
+
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(1);
+    animation-delay: calc(-0.1s * var(--char-index));
+  }
+
+  .char:before,
+  .char:after {
+    visibility: visible;
+    opacity: 0;
+    mix-blend-mode: overlay;
+    transition-property: opacity;
+    animation-name: glitch-anim, glitch-bounce;
+    animation-play-state: paused;
+  }
+
+  .char:before {
+    color: #f85959;
+    animation-delay: calc(-0.02s * var(--char-index));
+  }
+
+  .char:after {
+    color: #b7f5de;
+    animation-delay: calc(-0.5s * var(--char-index));
+  }
+
+  &:hover .char {
+    color: rgba(255, 255, 255, 0.3);
+    animation-name: glitch-bounce;
+  }
+  &:hover .char:before,
+  &:hover .char:after {
+    opacity: 1;
+    animation-play-state: running;
+  }
+}
+
+.glitch-it2 {
+  .char,
+  .char:before,
+  .char:after {
+    transition: color 0.2s ease;
+    animation-duration: 0.9s, 1s;
+
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(1);
+    animation-delay: calc(-0.1s * var(--char-index));
+  }
+
+  .char:before,
+  .char:after {
+    visibility: visible;
+    opacity: 0;
+    mix-blend-mode: overlay;
+    transition-property: opacity;
+    animation-name: glitch-anim2, glitch-bounce;
+    animation-play-state: paused;
+  }
+
+  .char:before {
+    color: #f85959;
+    animation-delay: calc(-0.02s * var(--char-index));
+  }
+
+  .char:after {
+    color: #b7f5de;
+    animation-delay: calc(-0.5s * var(--char-index));
+  }
+
+  &:hover .char {
+    color: rgba(255, 255, 255, 0.3);
+    animation-name: glitch-bounce;
+  }
+  &:hover .char:before,
+  &:hover .char:after {
+    opacity: 1;
+    animation-play-state: running;
+  }
+}
+
+@keyframes glitch-bounce {
+  20% {
+    transform: translate(-1%, 0%);
+  }
+  40% {
+    transform: translate(14%, -2%);
+  }
+  50% {
+    transform: translate(-5%, 5%);
+  }
+  65% {
+    transform: translate(1%, -2%);
+  }
+  80% {
+    transform: translate(-3%, 2%);
+  }
+}
+
+@keyframes glitch-anim {
+  0% {
+    clip-path: polygon(0 0, 51% 0, 52% 100%, 0 100%);
+  }
+  20% {
+    clip-path: polygon(0 8%, 100% 13%, 62% 90%, 0 100%, 43% 38%, 0% 50%);
+  }
+  40% {
+    clip-path: polygon(31% 0, 100% 79%, 0 100%, 43% 56%, 1% 52%, 39% 38%);
+  }
+  60% {
+    clip-path: polygon(0 5%, 100% 59%, 100% 70%, 0 20%);
+  }
+  80% {
+    clip-path: polygon(0 72%, 100% 41%, 100% 100%, 0 87%);
+  }
+}
