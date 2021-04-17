@@ -14,8 +14,6 @@
   body {
     @apply bg-black;
   }
-  ::-webkit-scrollbar-thumb {
-  }
   :root {
     font-family: 'geomanist';
   }
