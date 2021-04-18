@@ -18,7 +18,9 @@
     "tailwindcss",
     "nextjs",
     "react-query",
-    "mongodb"
+    "mongodb",
+    "graphql",
+    "apollo"
   ],
-  "interestingTech": ["jest", "graphql", "apollo"]
+  "interestingTech": ["jest"]
 }

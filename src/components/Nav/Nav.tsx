@@ -12,13 +12,7 @@ export const Nav: FC = () => {
   const [nav, setNav] = useCtxNav()
   const [isOpen, setisOpen] = useState<boolean>(false)
 
-  const navigation: NavType[] = [
-    'home',
-    'about',
-    'projects',
-    'blogs',
-    'contacts',
-  ]
+  const navigation: NavType[] = ['home', 'projects', 'contacts']
 
   const navHandler = (_tab: NavType) => {
     setNav(_tab)

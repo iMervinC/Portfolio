@@ -50,6 +50,6 @@
   }
   .project-card-2 {
     @apply flex flex-row cursor-pointer  p-4 rounded-md border-2 border-solid border-white text-custom-offwhite 
-    hover:text-custom  transition-all duration-200 ease-in-out shadow-active bg-gray-800;
+      transition-all duration-200 ease-in-out shadow-active bg-gray-800;
   }
 }

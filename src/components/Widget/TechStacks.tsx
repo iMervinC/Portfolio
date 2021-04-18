@@ -32,7 +32,7 @@ const TechStack: FC<{
         {title}
       </h2>
       <div
-        className={`flex flex-wrap gap-4 mt-5 border-solid border-white bg-gray-800 rounded-md p-4 w-fit ${
+        className={`flex flex-wrap gap-4 mt-5 border-solid border-white bg-gray-800 rounded-2xl p-4 w-fit ${
           sub ? 'border-2' : 'border-4'
         }`}
       >

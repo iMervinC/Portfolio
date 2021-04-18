@@ -53,8 +53,9 @@ const PrevButton: FC<{ type?: 'demo' | 'code'; link: string }> = ({
       href={link}
       target="_blank"
       className="fancy-6 w-28 sm:w-32 text-center px-4 py-1 text-base sm:text-xl rounded-md border-2 border-solid hover:border-custom"
+      onClick={(e) => e.stopPropagation()}
     >
-      <button>
+      <button className="focus-within:outline-none">
         {type === 'code' ? `</> Code` : type === 'demo' ? `👁 Demo` : children}
       </button>
     </a>

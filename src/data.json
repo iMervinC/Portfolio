@@ -88,7 +88,7 @@
     },
     "url": "https://github.com/iMervinC/proshop",
     "source": "https://github.com/iMervinC/proshop",
-    "featured": true
+    "featured": false
   },
   {
     "title": "Firegram",
@@ -107,7 +107,7 @@
     "title": "Loopstudios",
     "logo": "",
     "preview": "https://github.com/iMervinC/loopstudios/blob/main/design/desktop-preview.jpg?raw=true",
-    "description": "Mobile first design using BEM and SASS built using Parcel",
+    "description": "Mobile first design built using BEM and SASS bundled in Parcel",
     "tech": {
       "frontend": ["html", "sass", "javascript", "parcel"],
       "backend": []
@@ -127,6 +127,19 @@
     },
     "url": "https://social-media-dashboard.imervinc.vercel.app/",
     "source": "https://github.com/iMervinC/Social-Media-Dashboard",
+    "featured": false
+  },
+  {
+    "title": "Rick And Morty GQL",
+    "logo": "",
+    "preview": "",
+    "description": "Fetching data using Apollo Client in a GraphQL API Rick and Morty",
+    "tech": {
+      "frontend": ["react", "tailwind", "apollo", "gql"],
+      "backend": []
+    },
+    "url": "",
+    "source": "",
     "featured": false
   }
 ]
