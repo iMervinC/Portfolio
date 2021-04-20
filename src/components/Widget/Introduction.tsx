@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import { NavFooter } from '../Nav'
 
 const ColoredText = ({ children }) => {
@@ -27,7 +28,11 @@ export const Introduction = () => {
       </p>
       <p>
         If you fancy a chat feel free to{' '}
-        <ColoredText>drop me a line.</ColoredText>
+        <Link href="/contacts">
+          <a>
+            <span className="text-custom text-link">drop me a line.</span>
+          </a>
+        </Link>
       </p>
       <NavFooter />
     </div>

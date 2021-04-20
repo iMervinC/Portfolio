@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { Globe, PageWrap } from '@/components/UI'
+import { PageWrap, Button } from '@/components/UI'
 
 const contacts: FC = () => {
   return (
@@ -43,6 +43,13 @@ const contacts: FC = () => {
             <p>Dev.to</p>
           </a>
         </div>
+        <a
+          href="/ItormaMervinChistianT-Resume.pdf"
+          className="text-xl border-2 border-solid border-white hover:border-custom focus:outline-none px-10 py-2 rounded-lg fancy-6 mt-5"
+          download
+        >
+          Resumé
+        </a>
       </div>
     </PageWrap>
   )

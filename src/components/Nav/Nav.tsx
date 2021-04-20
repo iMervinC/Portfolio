@@ -114,7 +114,9 @@ export const NavFooter = () => {
             <li className="nav-item-footer nav-footer">Projects</li>
           </a>
         </Link>
-        <li className="nav-item-footer nav-footer">Resumé</li>
+        <a href="/ItormaMervinChistianT-Resume.pdf" download>
+          <li className="nav-item-footer nav-footer">Resumé</li>
+        </a>
       </ul>
     </nav>
   )
