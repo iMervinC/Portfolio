@@ -22,9 +22,9 @@ export const Nav: FC = () => {
   return (
     <nav className="nav my-container">
       <Link scroll={false} href="/">
-        <a onClick={() => navHandler('home')}>
+        <button aria-label="logo" onClick={() => navHandler('home')}>
           <Logo />
-        </a>
+        </button>
       </Link>
       <div className="flex justify-between items-center">
         {size.width <= 768 ? (
@@ -47,21 +47,19 @@ export const Nav: FC = () => {
                 className="font-bold flex gap-10 text-xl mr-2"
               >
                 {navigation.map((_nav, index) => (
-                  <Link
-                    scroll={false}
-                    key={index}
-                    href={_nav === 'home' ? '/' : `/${_nav}`}
+                  <li
+                    className={`uppercase hover:text-custom transition duration-500 ${
+                      nav === _nav && 'text-custom'
+                    }`}
                   >
-                    <a onClick={() => navHandler(_nav)}>
-                      <li
-                        className={`uppercase hover:text-custom transition duration-500 ${
-                          nav === _nav && 'text-custom'
-                        }`}
-                      >
-                        {_nav}
-                      </li>
-                    </a>
-                  </Link>
+                    <Link
+                      scroll={false}
+                      key={index}
+                      href={_nav === 'home' ? '/' : `/${_nav}`}
+                    >
+                      <a onClick={() => navHandler(_nav)}>{_nav}</a>
+                    </Link>
+                  </li>
                 ))}
               </motion.ul>
             )}
@@ -106,17 +104,25 @@ export const NavFooter = () => {
   return (
     <nav className="text-2xl sm:text-4xl pt-10">
       <ul className="flex space-x-8">
-        <a href="https://github.com/iMervinC" target="_blank">
-          <li className="nav-item-footer nav-footer">Github</li>
-        </a>
-        <Link scroll={false} href="/projects">
-          <a onClick={() => setNav('projects')}>
-            <li className="nav-item-footer nav-footer">Projects</li>
+        <li className="nav-item-footer nav-footer">
+          <a
+            rel="noreferrer"
+            href="https://github.com/iMervinC"
+            target="_blank"
+          >
+            Github
           </a>
-        </Link>
-        <a href="/ItormaMervinChistianT-Resume.pdf" download>
-          <li className="nav-item-footer nav-footer">Resumé</li>
-        </a>
+        </li>
+        <li className="nav-item-footer nav-footer">
+          <Link scroll={false} href="/projects">
+            <a onClick={() => setNav('projects')}>Projects</a>
+          </Link>
+        </li>
+        <li className="nav-item-footer nav-footer">
+          <a rel="noreferrer" href="/ItormaMervinChistianT-Resume.pdf" download>
+            Resumé
+          </a>
+        </li>
       </ul>
     </nav>
   )
