@@ -26,6 +26,7 @@ module.exports = {
         hero: 'calc(100vh - 4rem)',
         'hero-m': 'calc(100vh - 8rem)',
         preview: '340px',
+        fit: 'fit-content',
       },
       width: {
         fit: 'fit-content',

@@ -12,12 +12,19 @@ const ProjNorm: FC<Data> = ({ title, url, source, description, tech }) => {
 
   return (
     <motion.li
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       layout
       className="flex flex-col  project-card-2 items-center mt-5 min-w-fit group"
       onClick={clickHandler}
     >
-      <div className="w-full flex justify-between items-center group-hover:text-custom">
-        <h4 className="text-3xl w-full">{title}</h4>
+      <motion.div
+        layout
+        className="w-full flex justify-between items-center group-hover:text-custom"
+      >
+        <motion.h4 layout className="text-3xl w-full">
+          {title}
+        </motion.h4>
         <svg
           className="w-8"
           xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +36,7 @@ const ProjNorm: FC<Data> = ({ title, url, source, description, tech }) => {
             d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
           ></motion.path>
         </svg>
-      </div>
+      </motion.div>
       <AnimatePresence>
         {show && (
           <Content

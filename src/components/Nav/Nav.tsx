@@ -12,7 +12,7 @@ export const Nav: FC = () => {
   const [nav, setNav] = useCtxNav()
   const [isOpen, setisOpen] = useState<boolean>(false)
 
-  const navigation: NavType[] = ['home', 'projects', 'contacts']
+  const navigation: NavType[] = ['home', 'projects', 'blogs', 'contacts']
 
   const navHandler = (_tab: NavType) => {
     setNav(_tab)
@@ -48,6 +48,7 @@ export const Nav: FC = () => {
               >
                 {navigation.map((_nav, index) => (
                   <li
+                    key={index}
                     className={`uppercase hover:text-custom transition duration-500 ${
                       nav === _nav && 'text-custom'
                     }`}

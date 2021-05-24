@@ -7,16 +7,22 @@ const Projects: FC<{ gridSpan: string }> = ({ gridSpan }) => {
   const data = projects.filter((proj) => proj.featured === false)
 
   return (
-    <AnimateSharedLayout>
-      <div className={gridSpan}>
+    <motion.div
+      layout
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 2 }}
+      className={gridSpan}
+    >
+      <AnimateSharedLayout>
         <h2 className="text-5xl text-white">Projects</h2>
         <motion.ul layout>
           {data.map((proj) => (
-            <ProjNorm {...proj} />
+            <ProjNorm key={proj.title} {...proj} />
           ))}
         </motion.ul>
-      </div>
-    </AnimateSharedLayout>
+      </AnimateSharedLayout>
+    </motion.div>
   )
 }
 
