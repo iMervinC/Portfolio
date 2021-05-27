@@ -49,6 +49,10 @@
     @apply flex flex-col cursor-pointer  p-4 rounded-md border-2 border-solid border-white text-custom-offwhite 
     hover:text-custom  transition-all duration-200 ease-in-out hover:shadow-custom transform hover:-translate-y-2 hover:translate-x-2 active:-translate-y-1 active:translate-x-1 active:shadow-active bg-gray-800;
   }
+  .blog-card {
+    @apply flex flex-col cursor-pointer  text-custom-offwhite 
+    hover:text-custom  transition-all duration-200 ease-in-out hover:shadow-custom transform hover:-translate-y-2 hover:translate-x-2 active:-translate-y-1 active:translate-x-1 active:shadow-active bg-gray-800 max-w-[500px] rounded-xl border-4 border-solid border-white;
+  }
   .project-card-2 {
     @apply flex flex-row cursor-pointer  p-4 rounded-md border-2 border-solid border-white text-custom-offwhite 
       transition-all duration-200 ease-in-out shadow-active bg-gray-800;

@@ -1,21 +1,23 @@
 import { FC } from 'react'
+import { motion } from 'framer-motion'
 import techStack from '@/techStack.json'
 
 const TechStacks: FC<{ gridSpan: string }> = ({ gridSpan }) => {
   return (
-    <div className={gridSpan}>
+    <motion.div
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 2.3 }}
+      className={gridSpan}
+    >
       <TechStack title="My Tech Stack" techs={techStack.myStack} />
       <TechStack
         title="Currently Hacking"
         techs={techStack.currentlyHacking}
         sub
       />
-      <TechStack
-        title="Interesting Tech"
-        techs={techStack.interestingTech}
-        sub
-      />
-    </div>
+      <TechStack title="Up Next!" techs={techStack.interestingTech} sub />
+    </motion.div>
   )
 }
 
@@ -44,6 +46,13 @@ const TechStack: FC<{
             alt={tech}
           />
         ))}
+        {title === 'Up Next!' && (
+          <img
+            className={`inline w-auto ${sub ? 'h-9' : 'h-12'}`}
+            src="/react-testing-lib.png"
+            alt="react-testing-lib"
+          />
+        )}
       </div>
     </>
   )

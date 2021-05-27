@@ -12,7 +12,7 @@ export const Nav: FC = () => {
   const [nav, setNav] = useCtxNav()
   const [isOpen, setisOpen] = useState<boolean>(false)
 
-  const navigation: NavType[] = ['home', 'projects', 'contacts']
+  const navigation: NavType[] = ['home', 'projects', 'blogs', 'contacts']
 
   const navHandler = (_tab: NavType) => {
     setNav(_tab)
@@ -21,7 +21,7 @@ export const Nav: FC = () => {
 
   return (
     <nav className="nav my-container">
-      <Link scroll={false} href="/">
+      <Link href="/">
         <button aria-label="logo" onClick={() => navHandler('home')}>
           <Logo />
         </button>
@@ -48,15 +48,12 @@ export const Nav: FC = () => {
               >
                 {navigation.map((_nav, index) => (
                   <li
+                    key={index}
                     className={`uppercase hover:text-custom transition duration-500 ${
                       nav === _nav && 'text-custom'
                     }`}
                   >
-                    <Link
-                      scroll={false}
-                      key={index}
-                      href={_nav === 'home' ? '/' : `/${_nav}`}
-                    >
+                    <Link key={index} href={_nav === 'home' ? '/' : `/${_nav}`}>
                       <a onClick={() => navHandler(_nav)}>{_nav}</a>
                     </Link>
                   </li>
@@ -114,7 +111,7 @@ export const NavFooter = () => {
           </a>
         </li>
         <li className="nav-item-footer nav-footer">
-          <Link scroll={false} href="/projects">
+          <Link href="/projects">
             <a onClick={() => setNav('projects')}>Projects</a>
           </Link>
         </li>
