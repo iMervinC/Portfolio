@@ -138,21 +138,21 @@
       "frontend": ["react", "tailwind", "apollo", "gql"],
       "backend": []
     },
-    "url": "",
-    "source": "",
+    "url": "https://ricka-mort-gql.vercel.app/",
+    "source": "https://github.com/iMervinC/ricka-mort-gql",
     "featured": false
   },
   {
     "title": "Tethered",
     "logo": "https://raw.githubusercontent.com/iMervinC/Portfolio/cba806741e37b79afe614f984588ca7ceafa67b3/public/logo.svg",
-    "preview": "https://res.cloudinary.com/dz209s6jk/image/upload/q_auto,w_900/Screenshots/kdhb1onz1p3br890yvad.jpg",
+    "preview": "https://raw.githubusercontent.com/iMervinC/Tethered/main/Capture.PNG",
     "description": "A simple fullstack social media app build with React/Next.js with a nodejs backend, running Apollo GQL API. The goal of this project is to get used to apollo both front and back.",
     "tech": {
       "frontend": ["react", "nextjs", "apollo", "graphql", "sass"],
       "backend": ["nodejs", "mongodb", "apollo", "graphql"]
     },
-    "url": "",
-    "source": "",
+    "url": "https://tethered.vercel.app",
+    "source": "https://github.com/iMervinC/Tethered",
     "featured": true
   }
 ]
