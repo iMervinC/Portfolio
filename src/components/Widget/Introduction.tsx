@@ -22,9 +22,7 @@ export const Introduction = () => {
       <p>
         Love learning and building anything <ColoredText>React</ColoredText> and
         it’s my main jam at the moment! Right now I’m getting my hands dirty
-        with <ColoredText>Next.js</ColoredText> and{' '}
-        <ColoredText>MongoDB</ColoredText> to build{' '}
-        <ColoredText>fullstack</ColoredText> apps.
+        building <ColoredText>fullstack</ColoredText> apps.
       </p>
       <p>
         If you fancy a chat feel free to{' '}
