@@ -35,7 +35,7 @@
   {
     "title": "My Portfolio",
     "logo": "https://raw.githubusercontent.com/iMervinC/Portfolio/cba806741e37b79afe614f984588ca7ceafa67b3/public/logo.svg",
-    "preview": "https://github.com/iMervinC/Portfolio/blob/main/port.PNG?raw=true",
+    "preview": "/port.PNG",
     "description": "Where you are in right now! Welcome to my personal slice🍕 of the internet. The place you can know me better that any social media that I'm In. My show case of my hobby. Hopefully gonna do this for a living.",
     "tech": {
       "frontend": [
