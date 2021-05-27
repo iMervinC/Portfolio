@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
 import { IntroAnim } from '@/animations/hero'
 import TextLoop from 'react-text-loop'
-import { Button, Looper } from '../UI'
+import { Button } from '../UI'
 import useCtxNav from '@/hooks/useCtxNav'
 
 export const Intro: FC = () => {
@@ -19,12 +19,11 @@ export const Intro: FC = () => {
         className="text-center transform sm:-translate-x-8"
       >
         <TextLoop>
-          <span>👋Kumusta</span>
-          <span>🌊Ahoy</span>
-          <span>🌺Aloha</span>
-          <span>🤠Howdy</span>
+          <h1>👋Kumusta</h1>
+          <h1>🌊Ahoy</h1>
+          <h1>🌺Aloha</h1>
+          <h1>🤠Howdy</h1>
         </TextLoop>
-        {/* <Looper content={['👋Kumusta', '🌊Ahoy', '🌺Aloha', '🤠Howdy']} /> */}
       </motion.div>
       <motion.div
         initial="hidden"

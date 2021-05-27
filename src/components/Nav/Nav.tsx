@@ -21,7 +21,7 @@ export const Nav: FC = () => {
 
   return (
     <nav className="nav my-container">
-      <Link scroll={false} href="/">
+      <Link href="/">
         <button aria-label="logo" onClick={() => navHandler('home')}>
           <Logo />
         </button>
@@ -53,11 +53,7 @@ export const Nav: FC = () => {
                       nav === _nav && 'text-custom'
                     }`}
                   >
-                    <Link
-                      scroll={false}
-                      key={index}
-                      href={_nav === 'home' ? '/' : `/${_nav}`}
-                    >
+                    <Link key={index} href={_nav === 'home' ? '/' : `/${_nav}`}>
                       <a onClick={() => navHandler(_nav)}>{_nav}</a>
                     </Link>
                   </li>
@@ -115,7 +111,7 @@ export const NavFooter = () => {
           </a>
         </li>
         <li className="nav-item-footer nav-footer">
-          <Link scroll={false} href="/projects">
+          <Link href="/projects">
             <a onClick={() => setNav('projects')}>Projects</a>
           </Link>
         </li>
