@@ -1,6 +1,6 @@
 import { FC, useState } from 'react'
 import { motion, AnimateSharedLayout, AnimatePresence } from 'framer-motion'
-import { TechCard, PreviewProj, PrevButton } from '@/components/UI'
+import { TechCard, PreviewProj } from '@/components/UI'
 import { listContainer, listItem } from '@/utils/animations'
 import { Data, ProjData } from '@/utils/types'
 import projects from '@/data.json'

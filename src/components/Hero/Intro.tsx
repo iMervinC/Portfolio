@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
 import { IntroAnim } from '@/animations/hero'

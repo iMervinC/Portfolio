@@ -1,13 +1,24 @@
-import { FC } from 'react'
-import { motion } from 'framer-motion'
+import { FC, useEffect } from 'react'
+import { useInView } from 'react-intersection-observer'
+import { motion, useAnimation } from 'framer-motion'
 import techStack from '@/techStack.json'
+import useWindowSize from '@/hooks/useWindowSize'
 
 const TechStacks: FC<{ gridSpan: string }> = ({ gridSpan }) => {
+  const { width } = useWindowSize()
+  const { ref, inView } = useInView()
+  const control = useAnimation()
+
+  useEffect(() => {
+    inView && control.start({ opacity: 1, y: 0 })
+  }, [inView])
+
   return (
     <motion.div
+      ref={ref}
       initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 2.3 }}
+      animate={control}
+      transition={{ delay: width > 1029 ? 2.3 : 0 }}
       className={gridSpan}
     >
       <TechStack title="My Tech Stack" techs={techStack.myStack} />

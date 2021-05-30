@@ -32,12 +32,12 @@ export const PreviewProj: FC<ProjData> = ({
           initial="hidden"
           animate="visible"
           exit="exit"
-          className="h-80 w-[40rem] bg-custom rounded-md"
+          className="h-80 max-w-[25rem] min-w-[20rem] sm:min-w-[25rem] sm:w-[25rem] bg-custom rounded-md mx-auto"
         >
           <img
             src={preview}
             alt={title}
-            className="h-80 w-[40rem] bg-custom self-center sm:self-start rounded-md"
+            className="h-80 w-[25rem] bg-custom self-center sm:self-start rounded-md"
           />
         </motion.div>
 

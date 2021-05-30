@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, useEffect } from 'react'
 import { PageWrap } from '@/components/UI'
 import { Featured, Projects, TechStacks } from '@/components/Widget'
 

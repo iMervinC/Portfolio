@@ -17,6 +17,7 @@
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-download-link": "^2.3.0",
+    "react-intersection-observer": "^8.32.0",
     "react-text-loop": "^2.3.0",
     "sass": "^1.32.6",
     "splitting": "^1.0.6"

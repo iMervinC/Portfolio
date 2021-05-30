@@ -1,10 +1,15 @@
 import { FC } from 'react'
 import { PageWrap } from '@/components/UI'
+import { motion } from 'framer-motion'
 
 const contacts: FC = () => {
   return (
     <PageWrap title={'Contacts'}>
-      <div className="h-screen w-full flex items-center justify-center flex-col">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="h-screen w-full flex items-center justify-center flex-col"
+      >
         <h1 className="text-5xl sm:text-7xl uppercase text-center">
           Contact Me!
         </h1>
@@ -16,13 +21,13 @@ const contacts: FC = () => {
             itorma.mervin@gmail.com
           </a>
         </p>
-        <ul className="flex gap-5 mt-10">
+        <ul className="flex gap-10 gap-y-5 mt-10 flex-wrap justify-center">
           <li>
             <a
               href="https://github.com/iMervinC"
               rel="noreferrer"
               target="_blank"
-              className="flex items-center text-2xl space-x-2 hover:text-custom cursor-pointer"
+              className="socials"
             >
               <svg
                 className="w-10 fill-current"
@@ -41,27 +46,48 @@ const contacts: FC = () => {
           </li>
           <li>
             <a
+              href="https://twitter.com/iMervinC"
+              rel="noreferrer"
+              target="_blank"
+              className="socials"
+            >
+              <svg
+                className="w-10 fill-current"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+              >
+                <title>Twitter</title>
+                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+              </svg>
+              <p>Twitter</p>
+            </a>
+          </li>
+          <li>
+            <a
               href="https://dev.to/imervinc"
               rel="noreferrer"
               target="_blank"
-              className="group flex items-center text-2xl space-x-2 hover:text-custom cursor-pointer"
+              className="group socials"
             >
-              <div className="px-2 py-1 bg-white group-hover:bg-custom text-black rounded-md text-xl">
-                DEV
-              </div>
+              <div className="devto-icon ">DEV</div>
               <p>Dev.to</p>
             </a>
           </li>
         </ul>
-        <a
-          rel="noreferrer"
-          href="/ItormaMervinChistianT-Resume.pdf"
-          className="text-xl border-2 border-solid border-white hover:border-custom focus:outline-none px-10 py-2 rounded-lg fancy-6 mt-5"
-          download
-        >
-          Resumé
-        </a>
-      </div>
+        <div className="mt-10">
+          <h3 className="text-center text-3xl mb-2 text-custom">Download My</h3>
+          <a
+            rel="noreferrer"
+            href="/ItormaMervinChistianT-Resume.pdf"
+            className="text-xl sm:text-2xl border-2 border-solid border-white hover:border-custom focus:outline-none px-10 py-2 rounded-lg fancy-6 w-fit mx-auto block"
+            download
+          >
+            Resumé
+          </a>
+        </div>
+      </motion.div>
     </PageWrap>
   )
 }
