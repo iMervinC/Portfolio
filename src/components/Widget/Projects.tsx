@@ -21,7 +21,7 @@ const Projects: FC<{ gridSpan: string }> = ({ gridSpan }) => {
       initial={{ opacity: 0, y: 100 }}
       animate={control}
       className={gridSpan}
-      transition={{ delay: width > 1029 ? 2 : 0 }}
+      transition={{ delay: 0 }}
       ref={ref}
     >
       <AnimateSharedLayout>

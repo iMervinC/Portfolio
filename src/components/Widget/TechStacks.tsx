@@ -18,7 +18,7 @@ const TechStacks: FC<{ gridSpan: string }> = ({ gridSpan }) => {
       ref={ref}
       initial={{ opacity: 0, y: 100 }}
       animate={control}
-      transition={{ delay: width > 1029 ? 2.3 : 0 }}
+      transition={{ delay: 0 }}
       className={gridSpan}
     >
       <TechStack title="My Tech Stack" techs={techStack.myStack} />
