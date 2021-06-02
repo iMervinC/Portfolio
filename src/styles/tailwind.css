@@ -25,20 +25,20 @@
 }
 
 @layer components {
-  .contain {
-    @apply container;
-  }
-
   .nav {
     @apply flex fixed justify-between text-custom-offwhite items-center mt-14 sm:mt-28 left-1/2 transform -translate-x-1/2 z-50 md:z-40;
   }
 
-  .nav-mobile {
-    @apply font-bold flex flex-col justify-center gap-10 text-xl text-black absolute bg-custom-offwhite  h-screen -top-14 sm:-top-28 px-10 w-56 transform translate-x-10;
-  }
-
   .btn {
     @apply text-xl border-2 border-solid border-white focus:outline-none px-10 py-2 rounded-lg transition-colors ease-in-out duration-300 hover:bg-custom hover:border-custom hover:text-black;
+  }
+
+  .contain {
+    @apply container;
+  }
+
+  .nav-mobile {
+    @apply font-bold flex flex-col justify-center gap-10 text-xl text-black absolute bg-custom-offwhite  h-screen -top-14 sm:-top-28 px-10 w-56 transform translate-x-10;
   }
 
   .nav-item-footer {

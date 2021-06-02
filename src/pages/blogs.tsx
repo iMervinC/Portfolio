@@ -2,7 +2,7 @@ import { FC, useEffect } from 'react'
 import { PageWrap } from '@/components/UI'
 import axios from 'axios'
 import { title } from 'process'
-
+import type { GetStaticProps } from 'next'
 interface Blogs {
   id: number
   title: string
@@ -39,7 +39,7 @@ const blogs: FC<{ blogs: Blogs[] }> = ({ blogs }) => {
 
 export default blogs
 
-export const getStaticProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps = async () => {
   const { data } = await axios.get(
     'https://dev.to/api/articles?username=imervinc'
   )
@@ -48,5 +48,6 @@ export const getStaticProps = async ({ params }) => {
     props: {
       blogs: data,
     },
+    revalidate: 10,
   }
 }
