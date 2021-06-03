@@ -1,6 +1,5 @@
 import { FC, useEffect } from 'react'
 import { PageWrap } from '@/components/UI'
-import axios from 'axios'
 import { title } from 'process'
 import type { GetStaticProps } from 'next'
 interface Blogs {
@@ -9,25 +8,35 @@ interface Blogs {
   cover_image: string
   description: string
   url: string
+  tag_list?: string[]
 }
 
-const blogs: FC<{ blogs: Blogs[] }> = ({ blogs }) => {
+const blogs: FC<{ articles: Blogs[] }> = ({ articles }) => {
   return (
     <PageWrap title={'Blogs'}>
       <div className="mx-auto w-fit pt-36">
         <h1 className="text-7xl text-center mb-6">Blog Posts</h1>
         <ul className="space-y-10">
-          {blogs.reverse().map((article) => (
+          {articles.reverse().map((article) => (
             <li key={article.id}>
-              <a className="blog-card" href={article.url} target="_blank">
+              <a className="blog-card group" href={article.url} target="_blank">
                 <img
                   src={article.cover_image}
                   alt={title}
                   className="rounded-t-lg"
                 />
-                <span className="block text-center text-xl sm:text-2xl p-4">
-                  {article.title}
-                </span>
+                <div className="p-4 space-y-2">
+                  <span className="space-x-2 flex">
+                    {article.tag_list.map((tag) => (
+                      <p className="bg-[#000000] px-3 py-1 rounded-lg border-2 border-white group-hover:text-white">
+                        {tag}
+                      </p>
+                    ))}
+                  </span>
+                  <p className="text-center text-xl sm:text-2xl">
+                    {article.title}
+                  </p>
+                </div>
               </a>
             </li>
           ))}
@@ -40,14 +49,14 @@ const blogs: FC<{ blogs: Blogs[] }> = ({ blogs }) => {
 export default blogs
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { data } = await axios.get(
-    'https://dev.to/api/articles?username=imervinc'
+  const res = await fetch('https://dev.to/api/articles?username=imervinc').then(
+    (res) => res.json()
   )
 
   return {
-    props: {
-      blogs: data,
-    },
     revalidate: 10,
+    props: {
+      articles: res,
+    },
   }
 }
